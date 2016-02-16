@@ -22,7 +22,7 @@ class Members(models.Model):
   idmembers = models.IntegerField(primary_key=True)
   fullname = models.CharField(max_length=300)
   gamename = models.CharField(max_length=300)
-  thumbnail = models.ImageField()
+  # thumbnail = models.ImageField()
   totalstars = models.IntegerField()
 
 
