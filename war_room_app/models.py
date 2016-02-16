@@ -18,6 +18,14 @@ class Wars(models.Model):
   enemydestruction = models.DecimalField(max_digits=10, decimal_places=3)
 
 
+class Members(models.Model):
+  idmembers = models.IntegerField(primary_key=True, max_length=11)
+  fullname = models.CharField(max_length=300)
+  gamename = models.CharField(max_length=300)
+  thumbnail = models.ImageField()
+  totalstars = models.IntegerField(max_length=11)
+  
+
 class Bases(models.Model):
   idbases = models.IntegerField(primary_key=True, max_length=11)
   name = models.CharField(max_length=200)
@@ -38,11 +46,3 @@ class Comments(models.Model):
   idmembers = models.ForeignKey(Members, on_delete=models.CASCADE)
   comment = models.CharField(max_length=3000)
   type = models.CharField(max_length=300)
-
-
-class Members(models.Model):
-  idmembers = models.IntegerField(primary_key=True, max_length=11)
-  fullname = models.CharField(max_length=300)
-  gamename = models.CharField(max_length=300)
-  thumbnail = models.ImageField()
-  totalstars = models.IntegerField(max_length=11)
