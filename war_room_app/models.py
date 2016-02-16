@@ -12,7 +12,7 @@ class Wars(models.Model):
   message = models.CharField(max_length=500)
   clanid = models.CharField(max_length=45)
   enemyclanid = models.CharField(max_length=45)
-  stars = models.IntegerField(max_length=11)
+  stars = models.IntegerField()
   enemystars = models.IntegerField()
   destruction = models.DecimalField(max_digits=10, decimal_places=3)
   enemydestruction = models.DecimalField(max_digits=10, decimal_places=3)
