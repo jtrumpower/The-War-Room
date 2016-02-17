@@ -4,9 +4,7 @@ from django.db import models
 
 
 # Create your models here.
-
-class Wars(models.Model):
-  idwars = models.IntegerField(primary_key=True)
+class War(models.Model):
   size = models.IntegerField()
   starttime = models.DateTimeField()
   message = models.CharField(max_length=500)
@@ -18,31 +16,27 @@ class Wars(models.Model):
   enemydestruction = models.DecimalField(max_digits=10, decimal_places=3)
 
 
-class Members(models.Model):
-  idmembers = models.IntegerField(primary_key=True)
+class Member(models.Model):
   fullname = models.CharField(max_length=300)
   gamename = models.CharField(max_length=300)
-  # thumbnail = models.ImageField()
+  thumbnail = models.ImageField(null=True)
   totalstars = models.IntegerField()
 
 
-class Bases(models.Model):
-  idbases = models.IntegerField(primary_key=True)
+class Base(models.Model):
   name = models.CharField(max_length=200)
-  idwars = models.ForeignKey(Wars, on_delete=models.CASCADE)
+  war = models.ForeignKey(War, on_delete=models.CASCADE)
 
 
-class Calls(models.Model):
-  idcalls = models.IntegerField(primary_key=True)
-  idmembers = models.ForeignKey(Members, on_delete=models.CASCADE)
-  idbases = models.ForeignKey(Bases, on_delete=models.CASCADE)
+class Dib(models.Model):
+  member = models.ForeignKey(Member, on_delete=models.CASCADE)
+  base = models.ForeignKey(Base, on_delete=models.CASCADE)
   stars = models.IntegerField()
   time = models.DateTimeField()
 
 
-class Comments(models.Model):
-  idcomments = models.IntegerField(primary_key=True)
-  idbases = models.ForeignKey(Bases, on_delete=models.CASCADE)
-  idmembers = models.ForeignKey(Members, on_delete=models.CASCADE)
+class Comment(models.Model):
+  base = models.ForeignKey(Base, on_delete=models.CASCADE)
+  member = models.ForeignKey(Member, on_delete=models.CASCADE)
   comment = models.CharField(max_length=3000)
   type = models.CharField(max_length=300)

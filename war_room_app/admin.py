@@ -1,10 +1,10 @@
 from django.contrib import admin
 
 # Register your models here.
-# from .models import Wars,Bases,Comments,Calls,Members
+from .models import War,Comment,Base,Dib,Member
 
-# admin.site.register(Wars)
-# admin.site.register(Bases)
-# admin.site.register(Comments)
-# admin.site.register(Calls)
-# admin.site.register(Members)
+admin.site.register(War)
+admin.site.register(Comment)
+admin.site.register(Base)
+admin.site.register(Dib)
+admin.site.register(Member)
