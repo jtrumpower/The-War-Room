@@ -1,0 +1,900 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'grunt-cli',
+1 verbose cli   'bower',
+1 verbose cli   'yo',
+1 verbose cli   'generator-karma',
+1 verbose cli   'generator-angular' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.25
+4 verbose cache add [ 'grunt-cli', null ]
+5 verbose cache add name=undefined spec="grunt-cli" args=["grunt-cli",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'grunt-cli',
+6 verbose parsed url   path: 'grunt-cli',
+6 verbose parsed url   href: 'grunt-cli' }
+7 verbose cache add [ 'bower', null ]
+8 verbose cache add name=undefined spec="bower" args=["bower",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'bower',
+9 verbose parsed url   path: 'bower',
+9 verbose parsed url   href: 'bower' }
+10 verbose cache add [ 'yo', null ]
+11 verbose cache add name=undefined spec="yo" args=["yo",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'yo',
+12 verbose parsed url   path: 'yo',
+12 verbose parsed url   href: 'yo' }
+13 verbose cache add [ 'generator-karma', null ]
+14 verbose cache add name=undefined spec="generator-karma" args=["generator-karma",null]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'generator-karma',
+15 verbose parsed url   path: 'generator-karma',
+15 verbose parsed url   href: 'generator-karma' }
+16 verbose cache add [ 'generator-angular', null ]
+17 verbose cache add name=undefined spec="generator-angular" args=["generator-angular",null]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'generator-angular',
+18 verbose parsed url   path: 'generator-angular',
+18 verbose parsed url   href: 'generator-angular' }
+19 silly lockFile 671ef8ac-grunt-cli grunt-cli
+20 verbose lock grunt-cli /home/jtrumpower/.npm/671ef8ac-grunt-cli.lock
+21 silly lockFile 206e3ce5-bower bower
+22 verbose lock bower /home/jtrumpower/.npm/206e3ce5-bower.lock
+23 silly lockFile c41975d1-yo yo
+24 verbose lock yo /home/jtrumpower/.npm/c41975d1-yo.lock
+25 silly lockFile 72787608-generator-karma generator-karma
+26 verbose lock generator-karma /home/jtrumpower/.npm/72787608-generator-karma.lock
+27 silly lockFile 458e0b50-generator-angular generator-angular
+28 verbose lock generator-angular /home/jtrumpower/.npm/458e0b50-generator-angular.lock
+29 silly lockFile 671ef8ac-grunt-cli grunt-cli
+30 silly lockFile 671ef8ac-grunt-cli grunt-cli
+31 silly lockFile 206e3ce5-bower bower
+32 silly lockFile 206e3ce5-bower bower
+33 silly lockFile c41975d1-yo yo
+34 silly lockFile c41975d1-yo yo
+35 silly lockFile 72787608-generator-karma generator-karma
+36 silly lockFile 72787608-generator-karma generator-karma
+37 silly lockFile 458e0b50-generator-angular generator-angular
+38 silly lockFile 458e0b50-generator-angular generator-angular
+39 verbose addNamed [ 'grunt-cli', '' ]
+40 verbose addNamed [ null, '*' ]
+41 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+42 verbose lock grunt-cli@ /home/jtrumpower/.npm/d63f3d0b-grunt-cli.lock
+43 verbose addNamed [ 'bower', '' ]
+44 verbose addNamed [ null, '*' ]
+45 silly lockFile 1240aab1-bower bower@
+46 verbose lock bower@ /home/jtrumpower/.npm/1240aab1-bower.lock
+47 verbose addNamed [ 'yo', '' ]
+48 verbose addNamed [ null, '*' ]
+49 silly lockFile d937c28e-yo yo@
+50 verbose lock yo@ /home/jtrumpower/.npm/d937c28e-yo.lock
+51 verbose addNamed [ 'generator-karma', '' ]
+52 verbose addNamed [ null, '*' ]
+53 silly lockFile 4afaad21-generator-karma generator-karma@
+54 verbose lock generator-karma@ /home/jtrumpower/.npm/4afaad21-generator-karma.lock
+55 verbose addNamed [ 'generator-angular', '' ]
+56 verbose addNamed [ null, '*' ]
+57 silly lockFile 0345f598-generator-angular generator-angular@
+58 verbose lock generator-angular@ /home/jtrumpower/.npm/0345f598-generator-angular.lock
+59 silly addNameRange { name: 'grunt-cli', range: '*', hasData: false }
+60 silly addNameRange { name: 'bower', range: '*', hasData: false }
+61 silly addNameRange { name: 'yo', range: '*', hasData: false }
+62 silly addNameRange { name: 'generator-karma', range: '*', hasData: false }
+63 verbose request where is /grunt-cli
+64 verbose request registry https://registry.npmjs.org/
+65 verbose request id 4e7f131f7317fb9a
+66 verbose url raw /grunt-cli
+67 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-cli' ]
+68 verbose url resolved https://registry.npmjs.org/grunt-cli
+69 verbose request where is https://registry.npmjs.org/grunt-cli
+70 info trying registry request attempt 1 at 22:55:07
+71 http GET https://registry.npmjs.org/grunt-cli
+72 verbose request where is /bower
+73 verbose request registry https://registry.npmjs.org/
+74 verbose url raw /bower
+75 verbose url resolving [ 'https://registry.npmjs.org/', './bower' ]
+76 verbose url resolved https://registry.npmjs.org/bower
+77 verbose request where is https://registry.npmjs.org/bower
+78 info trying registry request attempt 1 at 22:55:07
+79 http GET https://registry.npmjs.org/bower
+80 verbose request where is /yo
+81 verbose request registry https://registry.npmjs.org/
+82 verbose url raw /yo
+83 verbose url resolving [ 'https://registry.npmjs.org/', './yo' ]
+84 verbose url resolved https://registry.npmjs.org/yo
+85 verbose request where is https://registry.npmjs.org/yo
+86 info trying registry request attempt 1 at 22:55:07
+87 http GET https://registry.npmjs.org/yo
+88 silly addNameRange { name: 'generator-angular', range: '*', hasData: false }
+89 verbose request where is /generator-karma
+90 verbose request registry https://registry.npmjs.org/
+91 verbose url raw /generator-karma
+92 verbose url resolving [ 'https://registry.npmjs.org/', './generator-karma' ]
+93 verbose url resolved https://registry.npmjs.org/generator-karma
+94 verbose request where is https://registry.npmjs.org/generator-karma
+95 info trying registry request attempt 1 at 22:55:07
+96 http GET https://registry.npmjs.org/generator-karma
+97 verbose request where is /generator-angular
+98 verbose request registry https://registry.npmjs.org/
+99 verbose url raw /generator-angular
+100 verbose url resolving [ 'https://registry.npmjs.org/', './generator-angular' ]
+101 verbose url resolved https://registry.npmjs.org/generator-angular
+102 verbose request where is https://registry.npmjs.org/generator-angular
+103 info trying registry request attempt 1 at 22:55:07
+104 http GET https://registry.npmjs.org/generator-angular
+105 http 200 https://registry.npmjs.org/grunt-cli
+106 silly registry.get cb [ 200,
+106 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+106 silly registry.get     etag: '"1V8RHJNNZFA518IWOGRHN4V4N"',
+106 silly registry.get     'content-type': 'application/json',
+106 silly registry.get     'cache-control': 'max-age=300',
+106 silly registry.get     'content-length': '24156',
+106 silly registry.get     'accept-ranges': 'bytes',
+106 silly registry.get     date: 'Thu, 18 Feb 2016 03:55:07 GMT',
+106 silly registry.get     via: '1.1 varnish',
+106 silly registry.get     age: '50',
+106 silly registry.get     connection: 'keep-alive',
+106 silly registry.get     'x-served-by': 'cache-ord1731-ORD',
+106 silly registry.get     'x-cache': 'HIT',
+106 silly registry.get     'x-cache-hits': '1',
+106 silly registry.get     'x-timer': 'S1455767707.378711,VS0,VE0',
+106 silly registry.get     vary: 'Accept' } ]
+107 silly addNameRange number 2 { name: 'grunt-cli', range: '*', hasData: true }
+108 silly addNameRange versions [ 'grunt-cli',
+108 silly addNameRange   [ '0.1.0',
+108 silly addNameRange     '0.1.1',
+108 silly addNameRange     '0.1.2',
+108 silly addNameRange     '0.1.3',
+108 silly addNameRange     '0.1.4',
+108 silly addNameRange     '0.1.5',
+108 silly addNameRange     '0.1.6',
+108 silly addNameRange     '0.1.7',
+108 silly addNameRange     '0.1.8',
+108 silly addNameRange     '0.1.9',
+108 silly addNameRange     '0.1.10',
+108 silly addNameRange     '0.1.11',
+108 silly addNameRange     '0.1.12',
+108 silly addNameRange     '0.1.13',
+108 silly addNameRange     '1.0.0-rc1' ] ]
+109 verbose addNamed [ 'grunt-cli', '0.1.13' ]
+110 verbose addNamed [ '0.1.13', '0.1.13' ]
+111 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+112 verbose lock grunt-cli@0.1.13 /home/jtrumpower/.npm/28997503-grunt-cli-0-1-13.lock
+113 silly lockFile ab76c46e-g-grunt-cli-grunt-cli-0-1-13-tgz https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+114 verbose lock https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz /home/jtrumpower/.npm/ab76c46e-g-grunt-cli-grunt-cli-0-1-13-tgz.lock
+115 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz',
+115 verbose addRemoteTarball   'e9ebc4047631f5012d922770c39378133cad10f4' ]
+116 info retry fetch attempt 1 at 22:55:07
+117 verbose fetch to= /tmp/npm-554-YjzlqY5E/registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+118 http GET https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+119 http 200 https://registry.npmjs.org/yo
+120 silly registry.get cb [ 200,
+120 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+120 silly registry.get     etag: '"8TJ8T66XGK5UBJMK83KDS3JLI"',
+120 silly registry.get     'content-type': 'application/json',
+120 silly registry.get     'cache-control': 'max-age=300',
+120 silly registry.get     'content-length': '44933',
+120 silly registry.get     'accept-ranges': 'bytes',
+120 silly registry.get     date: 'Thu, 18 Feb 2016 03:55:07 GMT',
+120 silly registry.get     via: '1.1 varnish',
+120 silly registry.get     age: '201',
+120 silly registry.get     connection: 'keep-alive',
+120 silly registry.get     'x-served-by': 'cache-ord1728-ORD',
+120 silly registry.get     'x-cache': 'HIT',
+120 silly registry.get     'x-cache-hits': '1',
+120 silly registry.get     'x-timer': 'S1455767707.385255,VS0,VE0',
+120 silly registry.get     vary: 'Accept' } ]
+121 silly addNameRange number 2 { name: 'yo', range: '*', hasData: true }
+122 silly addNameRange versions [ 'yo',
+122 silly addNameRange   [ '1.1.0',
+122 silly addNameRange     '1.1.1',
+122 silly addNameRange     '1.1.2',
+122 silly addNameRange     '1.2.0',
+122 silly addNameRange     '1.2.1',
+122 silly addNameRange     '1.3.0',
+122 silly addNameRange     '1.3.2',
+122 silly addNameRange     '1.3.3',
+122 silly addNameRange     '1.4.6',
+122 silly addNameRange     '1.4.7',
+122 silly addNameRange     '1.4.8',
+122 silly addNameRange     '1.5.0',
+122 silly addNameRange     '1.5.1',
+122 silly addNameRange     '1.6.0' ] ]
+123 verbose addNamed [ 'yo', '1.6.0' ]
+124 verbose addNamed [ '1.6.0', '1.6.0' ]
+125 silly lockFile 2f4cf356-yo-1-6-0 yo@1.6.0
+126 verbose lock yo@1.6.0 /home/jtrumpower/.npm/2f4cf356-yo-1-6-0.lock
+127 silly lockFile a8d66f53-gistry-npmjs-org-yo-yo-1-6-0-tgz https://registry.npmjs.org/yo/-/yo-1.6.0.tgz
+128 verbose lock https://registry.npmjs.org/yo/-/yo-1.6.0.tgz /home/jtrumpower/.npm/a8d66f53-gistry-npmjs-org-yo-yo-1-6-0-tgz.lock
+129 verbose addRemoteTarball [ 'https://registry.npmjs.org/yo/-/yo-1.6.0.tgz',
+129 verbose addRemoteTarball   '67a3ca07e0880bc9fa3651892af4c5d2a95fcd0b' ]
+130 info retry fetch attempt 1 at 22:55:07
+131 verbose fetch to= /tmp/npm-554-YjzlqY5E/registry.npmjs.org/yo/-/yo-1.6.0.tgz
+132 http GET https://registry.npmjs.org/yo/-/yo-1.6.0.tgz
+133 http 200 https://registry.npmjs.org/bower
+134 silly registry.get cb [ 200,
+134 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+134 silly registry.get     etag: '"7QZXHJE3RLUDX6XJAR2271UTF"',
+134 silly registry.get     'content-type': 'application/json',
+134 silly registry.get     'cache-control': 'max-age=300',
+134 silly registry.get     'content-length': '169071',
+134 silly registry.get     'accept-ranges': 'bytes',
+134 silly registry.get     date: 'Thu, 18 Feb 2016 03:55:07 GMT',
+134 silly registry.get     via: '1.1 varnish',
+134 silly registry.get     age: '201',
+134 silly registry.get     connection: 'keep-alive',
+134 silly registry.get     'x-served-by': 'cache-ord1729-ORD',
+134 silly registry.get     'x-cache': 'HIT',
+134 silly registry.get     'x-cache-hits': '1',
+134 silly registry.get     'x-timer': 'S1455767707.369830,VS0,VE0',
+134 silly registry.get     vary: 'Accept' } ]
+135 silly addNameRange number 2 { name: 'bower', range: '*', hasData: true }
+136 silly addNameRange versions [ 'bower',
+136 silly addNameRange   [ '0.1.0',
+136 silly addNameRange     '0.1.2',
+136 silly addNameRange     '0.1.3',
+136 silly addNameRange     '0.2.0',
+136 silly addNameRange     '0.3.0',
+136 silly addNameRange     '0.3.1',
+136 silly addNameRange     '0.3.2',
+136 silly addNameRange     '0.4.0',
+136 silly addNameRange     '0.5.0',
+136 silly addNameRange     '0.5.1',
+136 silly addNameRange     '0.6.0',
+136 silly addNameRange     '0.6.1',
+136 silly addNameRange     '0.6.2',
+136 silly addNameRange     '0.6.3',
+136 silly addNameRange     '0.6.4',
+136 silly addNameRange     '0.6.5',
+136 silly addNameRange     '0.6.6',
+136 silly addNameRange     '0.6.7',
+136 silly addNameRange     '0.6.8',
+136 silly addNameRange     '0.7.0',
+136 silly addNameRange     '0.7.1',
+136 silly addNameRange     '0.8.0',
+136 silly addNameRange     '0.8.1',
+136 silly addNameRange     '0.8.2',
+136 silly addNameRange     '0.8.3',
+136 silly addNameRange     '0.8.4',
+136 silly addNameRange     '0.8.5',
+136 silly addNameRange     '0.8.6',
+136 silly addNameRange     '0.9.0',
+136 silly addNameRange     '0.9.1',
+136 silly addNameRange     '0.9.2',
+136 silly addNameRange     '0.10.0',
+136 silly addNameRange     '1.0.0',
+136 silly addNameRange     '1.0.1',
+136 silly addNameRange     '1.0.2',
+136 silly addNameRange     '1.0.3',
+136 silly addNameRange     '1.1.0',
+136 silly addNameRange     '1.1.1',
+136 silly addNameRange     '1.1.2',
+136 silly addNameRange     '1.2.0',
+136 silly addNameRange     '1.2.1',
+136 silly addNameRange     '1.2.2',
+136 silly addNameRange     '1.2.3',
+136 silly addNameRange     '1.2.4',
+136 silly addNameRange     '1.2.5',
+136 silly addNameRange     '1.2.6',
+136 silly addNameRange     '1.2.7',
+136 silly addNameRange     '1.2.8',
+136 silly addNameRange     '1.3.0',
+136 silly addNameRange     '1.3.1',
+136 silly addNameRange     '1.3.2',
+136 silly addNameRange     '1.3.3',
+136 silly addNameRange     '1.3.4',
+136 silly addNameRange     '1.3.5',
+136 silly addNameRange     '1.3.6',
+136 silly addNameRange     '1.3.7',
+136 silly addNameRange     '1.3.8',
+136 silly addNameRange     '1.3.9',
+136 silly addNameRange     '1.3.10',
+136 silly addNameRange     '1.3.11',
+136 silly addNameRange     '1.3.12',
+136 silly addNameRange     '1.4.0',
+136 silly addNameRange     '1.4.1',
+136 silly addNameRange     '1.5.0',
+136 silly addNameRange     '1.5.1',
+136 silly addNameRange     '1.5.2',
+136 silly addNameRange     '1.5.3',
+136 silly addNameRange     '1.6.2',
+136 silly addNameRange     '1.6.3',
+136 silly addNameRange     '1.6.4',
+136 silly addNameRange     '1.6.5',
+136 silly addNameRange     '1.5.4',
+136 silly addNameRange     '1.4.2',
+136 silly addNameRange     '1.6.6',
+136 silly addNameRange     '1.6.7',
+136 silly addNameRange     '1.6.8',
+136 silly addNameRange     '1.6.9',
+136 silly addNameRange     '1.7.0',
+136 silly addNameRange     '1.7.1',
+136 silly addNameRange     '1.7.2',
+136 silly addNameRange     '1.7.5',
+136 silly addNameRange     '1.7.6',
+136 silly addNameRange     '1.7.7' ] ]
+137 verbose addNamed [ 'bower', '1.7.7' ]
+138 verbose addNamed [ '1.7.7', '1.7.7' ]
+139 silly lockFile 8acd7280-bower-1-7-7 bower@1.7.7
+140 verbose lock bower@1.7.7 /home/jtrumpower/.npm/8acd7280-bower-1-7-7.lock
+141 silly lockFile df5960c3--npmjs-org-bower-bower-1-7-7-tgz https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+142 verbose lock https://registry.npmjs.org/bower/-/bower-1.7.7.tgz /home/jtrumpower/.npm/df5960c3--npmjs-org-bower-bower-1-7-7-tgz.lock
+143 verbose addRemoteTarball [ 'https://registry.npmjs.org/bower/-/bower-1.7.7.tgz',
+143 verbose addRemoteTarball   '2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92' ]
+144 info retry fetch attempt 1 at 22:55:07
+145 verbose fetch to= /tmp/npm-554-YjzlqY5E/registry.npmjs.org/bower/-/bower-1.7.7.tgz
+146 http GET https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+147 http 200 https://registry.npmjs.org/generator-karma
+148 silly registry.get cb [ 200,
+148 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+148 silly registry.get     etag: '"39ASPRMUEZVBCBJUM6IY4M4D3"',
+148 silly registry.get     'content-type': 'application/json',
+148 silly registry.get     'cache-control': 'max-age=300',
+148 silly registry.get     'content-length': '25660',
+148 silly registry.get     'accept-ranges': 'bytes',
+148 silly registry.get     date: 'Thu, 18 Feb 2016 03:55:07 GMT',
+148 silly registry.get     via: '1.1 varnish',
+148 silly registry.get     age: '0',
+148 silly registry.get     connection: 'keep-alive',
+148 silly registry.get     'x-served-by': 'cache-ord1733-ORD',
+148 silly registry.get     'x-cache': 'MISS',
+148 silly registry.get     'x-cache-hits': '0',
+148 silly registry.get     'x-timer': 'S1455767707.387718,VS0,VE262',
+148 silly registry.get     vary: 'Accept' } ]
+149 silly addNameRange number 2 { name: 'generator-karma', range: '*', hasData: true }
+150 silly addNameRange versions [ 'generator-karma',
+150 silly addNameRange   [ '0.1.1',
+150 silly addNameRange     '0.2.0',
+150 silly addNameRange     '0.3.0',
+150 silly addNameRange     '0.3.1',
+150 silly addNameRange     '0.4.1',
+150 silly addNameRange     '0.5.0',
+150 silly addNameRange     '0.6.0',
+150 silly addNameRange     '0.7.0',
+150 silly addNameRange     '0.8.0',
+150 silly addNameRange     '0.8.1',
+150 silly addNameRange     '0.8.2',
+150 silly addNameRange     '0.8.3',
+150 silly addNameRange     '0.9.0',
+150 silly addNameRange     '1.0.0',
+150 silly addNameRange     '1.0.1' ] ]
+151 verbose addNamed [ 'generator-karma', '1.0.1' ]
+152 verbose addNamed [ '1.0.1', '1.0.1' ]
+153 silly lockFile 1df92379-generator-karma-1-0-1 generator-karma@1.0.1
+154 verbose lock generator-karma@1.0.1 /home/jtrumpower/.npm/1df92379-generator-karma-1-0-1.lock
+155 silly lockFile e2523d4c--karma-generator-karma-1-0-1-tgz https://registry.npmjs.org/generator-karma/-/generator-karma-1.0.1.tgz
+156 verbose lock https://registry.npmjs.org/generator-karma/-/generator-karma-1.0.1.tgz /home/jtrumpower/.npm/e2523d4c--karma-generator-karma-1-0-1-tgz.lock
+157 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-karma/-/generator-karma-1.0.1.tgz',
+157 verbose addRemoteTarball   'b3ff10681bdbbf0a2aeea68dcda9a83b75de5df1' ]
+158 info retry fetch attempt 1 at 22:55:07
+159 verbose fetch to= /tmp/npm-554-YjzlqY5E/registry.npmjs.org/generator-karma/-/generator-karma-1.0.1.tgz
+160 http GET https://registry.npmjs.org/generator-karma/-/generator-karma-1.0.1.tgz
+161 http 200 https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+162 silly lockFile ab76c46e-g-grunt-cli-grunt-cli-0-1-13-tgz https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+163 silly lockFile ab76c46e-g-grunt-cli-grunt-cli-0-1-13-tgz https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz
+164 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+165 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+166 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+167 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+168 http 200 https://registry.npmjs.org/generator-angular
+169 silly registry.get cb [ 200,
+169 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+169 silly registry.get     etag: '"5EYVO2VEJBOXCE1VZO8O2F22R"',
+169 silly registry.get     'content-type': 'application/json',
+169 silly registry.get     'cache-control': 'max-age=300',
+169 silly registry.get     'content-length': '86645',
+169 silly registry.get     'accept-ranges': 'bytes',
+169 silly registry.get     date: 'Thu, 18 Feb 2016 03:55:07 GMT',
+169 silly registry.get     via: '1.1 varnish',
+169 silly registry.get     age: '0',
+169 silly registry.get     connection: 'keep-alive',
+169 silly registry.get     'x-served-by': 'cache-ord1727-ORD',
+169 silly registry.get     'x-cache': 'HIT',
+169 silly registry.get     'x-cache-hits': '1',
+169 silly registry.get     'x-timer': 'S1455767707.399387,VS0,VE302',
+169 silly registry.get     vary: 'Accept' } ]
+170 silly addNameRange number 2 { name: 'generator-angular', range: '*', hasData: true }
+171 silly addNameRange versions [ 'generator-angular',
+171 silly addNameRange   [ '0.1.0',
+171 silly addNameRange     '0.1.1',
+171 silly addNameRange     '0.1.2',
+171 silly addNameRange     '0.1.3',
+171 silly addNameRange     '0.1.4',
+171 silly addNameRange     '0.1.5',
+171 silly addNameRange     '0.2.0',
+171 silly addNameRange     '0.2.1',
+171 silly addNameRange     '0.2.2',
+171 silly addNameRange     '0.3.0',
+171 silly addNameRange     '0.3.1',
+171 silly addNameRange     '0.4.0',
+171 silly addNameRange     '0.5.0',
+171 silly addNameRange     '0.5.1',
+171 silly addNameRange     '0.6.0-rc.1',
+171 silly addNameRange     '0.6.0-rc.2',
+171 silly addNameRange     '0.6.0',
+171 silly addNameRange     '0.7.0',
+171 silly addNameRange     '0.7.1',
+171 silly addNameRange     '0.8.0',
+171 silly addNameRange     '0.9.0-0',
+171 silly addNameRange     '0.9.0-1',
+171 silly addNameRange     '0.9.0',
+171 silly addNameRange     '0.9.1',
+171 silly addNameRange     '0.9.2',
+171 silly addNameRange     '0.9.3',
+171 silly addNameRange     '0.9.5',
+171 silly addNameRange     '0.9.6',
+171 silly addNameRange     '0.9.7',
+171 silly addNameRange     '0.9.8',
+171 silly addNameRange     '0.10.0',
+171 silly addNameRange     '0.11.0',
+171 silly addNameRange     '0.11.1',
+171 silly addNameRange     '0.12.0',
+171 silly addNameRange     '0.11.2',
+171 silly addNameRange     '0.12.1',
+171 silly addNameRange     '0.13.0',
+171 silly addNameRange     '0.13.1',
+171 silly addNameRange     '0.13.2',
+171 silly addNameRange     '0.13.3',
+171 silly addNameRange     '0.13.4',
+171 silly addNameRange     '0.14.0',
+171 silly addNameRange     '0.15.0',
+171 silly addNameRange     '0.15.1' ] ]
+172 verbose addNamed [ 'generator-angular', '0.15.1' ]
+173 verbose addNamed [ '0.15.1', '0.15.1' ]
+174 silly lockFile 2466e7f7-generator-angular-0-15-1 generator-angular@0.15.1
+175 verbose lock generator-angular@0.15.1 /home/jtrumpower/.npm/2466e7f7-generator-angular-0-15-1.lock
+176 silly lockFile 72f5a92f-lar-generator-angular-0-15-1-tgz https://registry.npmjs.org/generator-angular/-/generator-angular-0.15.1.tgz
+177 verbose lock https://registry.npmjs.org/generator-angular/-/generator-angular-0.15.1.tgz /home/jtrumpower/.npm/72f5a92f-lar-generator-angular-0-15-1-tgz.lock
+178 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-angular/-/generator-angular-0.15.1.tgz',
+178 verbose addRemoteTarball   'c1b947da1a163eccdd1c0427818532972015036d' ]
+179 info retry fetch attempt 1 at 22:55:07
+180 verbose fetch to= /tmp/npm-554-YjzlqY5E/registry.npmjs.org/generator-angular/-/generator-angular-0.15.1.tgz
+181 http GET https://registry.npmjs.org/generator-angular/-/generator-angular-0.15.1.tgz
+182 http 200 https://registry.npmjs.org/yo/-/yo-1.6.0.tgz
+183 silly lockFile a8d66f53-gistry-npmjs-org-yo-yo-1-6-0-tgz https://registry.npmjs.org/yo/-/yo-1.6.0.tgz
+184 silly lockFile a8d66f53-gistry-npmjs-org-yo-yo-1-6-0-tgz https://registry.npmjs.org/yo/-/yo-1.6.0.tgz
+185 silly lockFile 2f4cf356-yo-1-6-0 yo@1.6.0
+186 silly lockFile 2f4cf356-yo-1-6-0 yo@1.6.0
+187 silly lockFile d937c28e-yo yo@
+188 silly lockFile d937c28e-yo yo@
+189 http 200 https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+190 http 200 https://registry.npmjs.org/generator-karma/-/generator-karma-1.0.1.tgz
+191 silly lockFile e2523d4c--karma-generator-karma-1-0-1-tgz https://registry.npmjs.org/generator-karma/-/generator-karma-1.0.1.tgz
+192 silly lockFile e2523d4c--karma-generator-karma-1-0-1-tgz https://registry.npmjs.org/generator-karma/-/generator-karma-1.0.1.tgz
+193 silly lockFile 1df92379-generator-karma-1-0-1 generator-karma@1.0.1
+194 silly lockFile 1df92379-generator-karma-1-0-1 generator-karma@1.0.1
+195 silly lockFile 4afaad21-generator-karma generator-karma@
+196 silly lockFile 4afaad21-generator-karma generator-karma@
+197 http 200 https://registry.npmjs.org/generator-angular/-/generator-angular-0.15.1.tgz
+198 silly lockFile 72f5a92f-lar-generator-angular-0-15-1-tgz https://registry.npmjs.org/generator-angular/-/generator-angular-0.15.1.tgz
+199 silly lockFile 72f5a92f-lar-generator-angular-0-15-1-tgz https://registry.npmjs.org/generator-angular/-/generator-angular-0.15.1.tgz
+200 silly lockFile 2466e7f7-generator-angular-0-15-1 generator-angular@0.15.1
+201 silly lockFile 2466e7f7-generator-angular-0-15-1 generator-angular@0.15.1
+202 silly lockFile 0345f598-generator-angular generator-angular@
+203 silly lockFile 0345f598-generator-angular generator-angular@
+204 silly lockFile df5960c3--npmjs-org-bower-bower-1-7-7-tgz https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+205 silly lockFile df5960c3--npmjs-org-bower-bower-1-7-7-tgz https://registry.npmjs.org/bower/-/bower-1.7.7.tgz
+206 silly lockFile 8acd7280-bower-1-7-7 bower@1.7.7
+207 silly lockFile 8acd7280-bower-1-7-7 bower@1.7.7
+208 silly lockFile 1240aab1-bower bower@
+209 silly lockFile 1240aab1-bower bower@
+210 silly resolved [ { name: 'grunt-cli',
+210 silly resolved     description: 'The grunt command line interface.',
+210 silly resolved     version: '0.1.13',
+210 silly resolved     author: { name: 'Grunt Team' },
+210 silly resolved     homepage: 'http://gruntjs.com/',
+210 silly resolved     repository: { type: 'git', url: 'git://github.com/gruntjs/grunt-cli.git' },
+210 silly resolved     bugs: { url: 'http://github.com/gruntjs/grunt-cli/issues' },
+210 silly resolved     licenses: [ [Object] ],
+210 silly resolved     bin: { grunt: 'bin/grunt' },
+210 silly resolved     engines: { node: '>= 0.8.0' },
+210 silly resolved     scripts: { test: 'node bin/grunt test' },
+210 silly resolved     preferGlobal: true,
+210 silly resolved     dependencies: { nopt: '~1.0.10', 'findup-sync': '~0.1.0', resolve: '~0.3.1' },
+210 silly resolved     devDependencies: { grunt: '~0.4.0', 'grunt-contrib-jshint': '~0.2.0' },
+210 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+210 silly resolved     _id: 'grunt-cli@0.1.13',
+210 silly resolved     dist:
+210 silly resolved      { shasum: 'e9ebc4047631f5012d922770c39378133cad10f4',
+210 silly resolved        tarball: 'http://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz' },
+210 silly resolved     _from: 'grunt-cli@',
+210 silly resolved     _npmVersion: '1.3.24',
+210 silly resolved     _npmUser: { name: 'tkellen', email: 'tyler@sleekcode.net' },
+210 silly resolved     maintainers: [ [Object] ],
+210 silly resolved     directories: {},
+210 silly resolved     _shasum: 'e9ebc4047631f5012d922770c39378133cad10f4',
+210 silly resolved     _resolved: 'https://registry.npmjs.org/grunt-cli/-/grunt-cli-0.1.13.tgz' },
+210 silly resolved   { name: 'yo',
+210 silly resolved     version: '1.6.0',
+210 silly resolved     description: 'CLI tool for running Yeoman generators',
+210 silly resolved     homepage: 'https://github.com/yeoman/yo#readme',
+210 silly resolved     author: { name: 'Yeoman' },
+210 silly resolved     files: [ 'lib' ],
+210 silly resolved     main: 'lib/index.js',
+210 silly resolved     keywords:
+210 silly resolved      [ 'cli-app',
+210 silly resolved        'cli',
+210 silly resolved        'front-end',
+210 silly resolved        'development',
+210 silly resolved        'dev',
+210 silly resolved        'build',
+210 silly resolved        'web',
+210 silly resolved        'tool',
+210 silly resolved        'scaffold',
+210 silly resolved        'stack',
+210 silly resolved        'yeoman',
+210 silly resolved        'generator',
+210 silly resolved        'generate',
+210 silly resolved        'app',
+210 silly resolved        'boilerplate' ],
+210 silly resolved     license: 'BSD-2-Clause',
+210 silly resolved     repository: { type: 'git', url: 'git+https://github.com/yeoman/yo.git' },
+210 silly resolved     bin: { yo: 'lib/cli.js' },
+210 silly resolved     engines: { node: '>=0.12.0' },
+210 silly resolved     scripts:
+210 silly resolved      { test: 'gulp',
+210 silly resolved        postinstall: 'yodoctor',
+210 silly resolved        postupdate: 'yodoctor',
+210 silly resolved        prepublish: 'gulp prepublish' },
+210 silly resolved     dependencies:
+210 silly resolved      { async: '^1.0.0',
+210 silly resolved        chalk: '^1.0.0',
+210 silly resolved        configstore: '^1.0.0',
+210 silly resolved        'cross-spawn-async': '^2.0.0',
+210 silly resolved        figures: '^1.3.5',
+210 silly resolved        fullname: '^2.0.0',
+210 silly resolved        got: '^5.0.0',
+210 silly resolved        'humanize-string': '^1.0.0',
+210 silly resolved        inquirer: '^0.11.0',
+210 silly resolved        insight: '^0.7.0',
+210 silly resolved        lodash: '^3.2.0',
+210 silly resolved        meow: '^3.0.0',
+210 silly resolved        'npm-keyword': '^4.1.0',
+210 silly resolved        opn: '^3.0.2',
+210 silly resolved        'package-json': '^2.1.0',
+210 silly resolved        'read-pkg-up': '^1.0.1',
+210 silly resolved        repeating: '^2.0.0',
+210 silly resolved        'root-check': '^1.0.0',
+210 silly resolved        'sort-on': '^1.0.0',
+210 silly resolved        'string-length': '^1.0.0',
+210 silly resolved        titleize: '^1.0.0',
+210 silly resolved        'update-notifier': '^0.6.0',
+210 silly resolved        'user-home': '^2.0.0',
+210 silly resolved        'yeoman-character': '^1.0.0',
+210 silly resolved        'yeoman-doctor': '^2.0.0',
+210 silly resolved        'yeoman-environment': '^1.5.0',
+210 silly resolved        yosay: '^1.0.0' },
+210 silly resolved     devDependencies:
+210 silly resolved      { mocha: '^2.1.0',
+210 silly resolved        mockery: '^1.4.0',
+210 silly resolved        nock: '^2.0.1',
+210 silly resolved        nsp: '^2.2.0',
+210 silly resolved        proxyquire: '^1.0.1',
+210 silly resolved        'registry-url': '^3.0.0',
+210 silly resolved        sinon: '^1.12.1',
+210 silly resolved        gulp: '^3.6.0',
+210 silly resolved        'gulp-eslint': '^1.0.0',
+210 silly resolved        'gulp-exclude-gitignore': '^1.0.0',
+210 silly resolved        'gulp-istanbul': '^0.9.0',
+210 silly resolved        'gulp-mocha': '^2.0.0',
+210 silly resolved        'gulp-plumber': '^1.0.0',
+210 silly resolved        'gulp-nsp': '^2.1.0',
+210 silly resolved        'gulp-coveralls': '^0.1.0' },
+210 silly resolved     gitHead: '23cd3dc3268d82466afe78b17819f4cbe518afcd',
+210 silly resolved     bugs: { url: 'https://github.com/yeoman/yo/issues' },
+210 silly resolved     _id: 'yo@1.6.0',
+210 silly resolved     _shasum: '67a3ca07e0880bc9fa3651892af4c5d2a95fcd0b',
+210 silly resolved     _from: 'yo@',
+210 silly resolved     _npmVersion: '3.5.3',
+210 silly resolved     _nodeVersion: '5.2.0',
+210 silly resolved     _npmUser: { name: 'sboudrias', email: 'admin@simonboudrias.com' },
+210 silly resolved     dist:
+210 silly resolved      { shasum: '67a3ca07e0880bc9fa3651892af4c5d2a95fcd0b',
+210 silly resolved        tarball: 'http://registry.npmjs.org/yo/-/yo-1.6.0.tgz' },
+210 silly resolved     maintainers:
+210 silly resolved      [ [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object] ],
+210 silly resolved     directories: {},
+210 silly resolved     _resolved: 'https://registry.npmjs.org/yo/-/yo-1.6.0.tgz' },
+210 silly resolved   { name: 'generator-karma',
+210 silly resolved     version: '1.0.1',
+210 silly resolved     description: 'Yeoman generator for Karma',
+210 silly resolved     license: 'BSD',
+210 silly resolved     main: 'app/index.js',
+210 silly resolved     repository:
+210 silly resolved      { type: 'git',
+210 silly resolved        url: 'git+https://github.com/yeoman/generator-karma.git' },
+210 silly resolved     author: { name: 'The Yeoman Team' },
+210 silly resolved     engines: { node: '>=0.10.0', npm: '>=1.2.10' },
+210 silly resolved     scripts: { test: 'mocha --reporter spec' },
+210 silly resolved     files: [ 'app', 'templates' ],
+210 silly resolved     keywords: [ 'yeoman-generator', 'scaffold', 'test', 'runner', 'karma' ],
+210 silly resolved     dependencies:
+210 silly resolved      { underscore: '^1.6.0',
+210 silly resolved        'yeoman-generator': '^0.19.1',
+210 silly resolved        'sorted-object': '~1.0.0' },
+210 silly resolved     devDependencies: { mocha: '*' },
+210 silly resolved     gitHead: 'b87d2b0746f693a4b1eff36465a083bf41c611f1',
+210 silly resolved     bugs: { url: 'https://github.com/yeoman/generator-karma/issues' },
+210 silly resolved     homepage: 'https://github.com/yeoman/generator-karma#readme',
+210 silly resolved     _id: 'generator-karma@1.0.1',
+210 silly resolved     _shasum: 'b3ff10681bdbbf0a2aeea68dcda9a83b75de5df1',
+210 silly resolved     _from: 'generator-karma@',
+210 silly resolved     _npmVersion: '3.3.9',
+210 silly resolved     _nodeVersion: '5.0.0',
+210 silly resolved     _npmUser: { name: 'sboudrias', email: 'admin@simonboudrias.com' },
+210 silly resolved     dist:
+210 silly resolved      { shasum: 'b3ff10681bdbbf0a2aeea68dcda9a83b75de5df1',
+210 silly resolved        tarball: 'http://registry.npmjs.org/generator-karma/-/generator-karma-1.0.1.tgz' },
+210 silly resolved     maintainers:
+210 silly resolved      [ [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object] ],
+210 silly resolved     directories: {},
+210 silly resolved     _resolved: 'https://registry.npmjs.org/generator-karma/-/generator-karma-1.0.1.tgz' },
+210 silly resolved   { name: 'generator-angular',
+210 silly resolved     version: '0.15.1',
+210 silly resolved     description: 'Yeoman generator for AngularJS',
+210 silly resolved     keywords:
+210 silly resolved      [ 'yeoman-generator',
+210 silly resolved        'scaffold',
+210 silly resolved        'framework',
+210 silly resolved        'component',
+210 silly resolved        'front-end',
+210 silly resolved        'app',
+210 silly resolved        'angular' ],
+210 silly resolved     author: { name: 'The Yeoman Team' },
+210 silly resolved     main: 'app/index.js',
+210 silly resolved     files:
+210 silly resolved      [ 'app',
+210 silly resolved        'common',
+210 silly resolved        'constant',
+210 silly resolved        'controller',
+210 silly resolved        'decorator',
+210 silly resolved        'directive',
+210 silly resolved        'factory',
+210 silly resolved        'filter',
+210 silly resolved        'main',
+210 silly resolved        'provider',
+210 silly resolved        'route',
+210 silly resolved        'service',
+210 silly resolved        'templates',
+210 silly resolved        'value',
+210 silly resolved        'view',
+210 silly resolved        'script-base.js',
+210 silly resolved        'util.js' ],
+210 silly resolved     repository:
+210 silly resolved      { type: 'git',
+210 silly resolved        url: 'git+https://github.com/yeoman/generator-angular.git' },
+210 silly resolved     scripts: { test: 'mocha' },
+210 silly resolved     dependencies:
+210 silly resolved      { chalk: '^1.0.0',
+210 silly resolved        wiredep: '^2.2.0',
+210 silly resolved        'yeoman-generator': '^0.16.0',
+210 silly resolved        yosay: '^1.0.2' },
+210 silly resolved     peerDependencies: { 'generator-karma': '>=0.9.0' },
+210 silly resolved     devDependencies:
+210 silly resolved      { grunt: '^0.4.5',
+210 silly resolved        'grunt-bump': '^0.6.0',
+210 silly resolved        'grunt-contrib-jshint': '^0.11.0',
+210 silly resolved        'grunt-conventional-github-releaser': '^0.5.0',
+210 silly resolved        'load-grunt-tasks': '^3.1.0',
+210 silly resolved        mocha: '*',
+210 silly resolved        'underscore.string': '^3.0.3' },
+210 silly resolved     engines: { node: '>=0.10.0' },
+210 silly resolved     license: 'BSD-2-Clause',
+210 silly resolved     gitHead: '22a638e975ff8024adb248e7fa4d9cd7c019fd44',
+210 silly resolved     bugs: { url: 'https://github.com/yeoman/generator-angular/issues' },
+210 silly resolved     homepage: 'https://github.com/yeoman/generator-angular#readme',
+210 silly resolved     _id: 'generator-angular@0.15.1',
+210 silly resolved     _shasum: 'c1b947da1a163eccdd1c0427818532972015036d',
+210 silly resolved     _from: 'generator-angular@',
+210 silly resolved     _npmVersion: '3.5.1',
+210 silly resolved     _nodeVersion: '5.1.0',
+210 silly resolved     _npmUser: { name: 'eddiemonge', email: 'eddie+npm@eddiemonge.com' },
+210 silly resolved     maintainers:
+210 silly resolved      [ [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object] ],
+210 silly resolved     dist:
+210 silly resolved      { shasum: 'c1b947da1a163eccdd1c0427818532972015036d',
+210 silly resolved        tarball: 'http://registry.npmjs.org/generator-angular/-/generator-angular-0.15.1.tgz' },
+210 silly resolved     directories: {},
+210 silly resolved     _resolved: 'https://registry.npmjs.org/generator-angular/-/generator-angular-0.15.1.tgz' },
+210 silly resolved   { name: 'bower',
+210 silly resolved     version: '1.7.7',
+210 silly resolved     description: 'The browser package manager',
+210 silly resolved     author: { name: 'Twitter' },
+210 silly resolved     license: 'MIT',
+210 silly resolved     repository: { type: 'git', url: 'git+https://github.com/bower/bower.git' },
+210 silly resolved     main: 'lib',
+210 silly resolved     bin: { bower: 'bin/bower' },
+210 silly resolved     homepage: 'http://bower.io',
+210 silly resolved     engines: { node: '>=0.10.0' },
+210 silly resolved     keywords: [ 'bower' ],
+210 silly resolved     files: [ 'bin', 'lib' ],
+210 silly resolved     bugs: { url: 'https://github.com/bower/bower/issues' },
+210 silly resolved     _id: 'bower@1.7.7',
+210 silly resolved     scripts: {},
+210 silly resolved     _shasum: '2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92',
+210 silly resolved     _from: 'bower@',
+210 silly resolved     _npmVersion: '3.5.3',
+210 silly resolved     _nodeVersion: '4.1.1',
+210 silly resolved     _npmUser: { name: 'sheerun', email: 'sheerun@sher.pl' },
+210 silly resolved     dist:
+210 silly resolved      { shasum: '2fd7ff3ebdcba5a8ffcd84c397c8fdfe9f825f92',
+210 silly resolved        tarball: 'http://registry.npmjs.org/bower/-/bower-1.7.7.tgz' },
+210 silly resolved     maintainers:
+210 silly resolved      [ [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object],
+210 silly resolved        [Object] ],
+210 silly resolved     directories: {},
+210 silly resolved     _resolved: 'https://registry.npmjs.org/bower/-/bower-1.7.7.tgz' } ]
+211 info install grunt-cli@0.1.13 into /usr/local/lib
+212 info install yo@1.6.0 into /usr/local/lib
+213 info install generator-karma@1.0.1 into /usr/local/lib
+214 info install generator-angular@0.15.1 into /usr/local/lib
+215 info install bower@1.7.7 into /usr/local/lib
+216 info installOne grunt-cli@0.1.13
+217 info installOne yo@1.6.0
+218 warn engine yo@1.6.0: wanted: {"node":">=0.12.0"} (current: {"node":"0.10.25","npm":"1.4.21"})
+219 info installOne generator-karma@1.0.1
+220 info installOne generator-angular@0.15.1
+221 info installOne bower@1.7.7
+222 verbose lib/node_modules/grunt-cli unbuild
+223 verbose lib/node_modules/yo unbuild
+224 verbose lib/node_modules/generator-karma unbuild
+225 verbose lib/node_modules/generator-angular unbuild
+226 verbose lib/node_modules/bower unbuild
+227 verbose tar unpack /home/jtrumpower/.npm/grunt-cli/0.1.13/package.tgz
+228 silly lockFile 466968dc-local-lib-node-modules-grunt-cli tar:///usr/local/lib/node_modules/grunt-cli
+229 verbose lock tar:///usr/local/lib/node_modules/grunt-cli /home/jtrumpower/.npm/466968dc-local-lib-node-modules-grunt-cli.lock
+230 silly lockFile e550d5e6-npm-grunt-cli-0-1-13-package-tgz tar:///home/jtrumpower/.npm/grunt-cli/0.1.13/package.tgz
+231 verbose lock tar:///home/jtrumpower/.npm/grunt-cli/0.1.13/package.tgz /home/jtrumpower/.npm/e550d5e6-npm-grunt-cli-0-1-13-package-tgz.lock
+232 verbose tar unpack /home/jtrumpower/.npm/yo/1.6.0/package.tgz
+233 silly lockFile 7d7c7bef-ar-usr-local-lib-node-modules-yo tar:///usr/local/lib/node_modules/yo
+234 verbose lock tar:///usr/local/lib/node_modules/yo /home/jtrumpower/.npm/7d7c7bef-ar-usr-local-lib-node-modules-yo.lock
+235 silly lockFile d15ea990-umpower-npm-yo-1-6-0-package-tgz tar:///home/jtrumpower/.npm/yo/1.6.0/package.tgz
+236 verbose lock tar:///home/jtrumpower/.npm/yo/1.6.0/package.tgz /home/jtrumpower/.npm/d15ea990-umpower-npm-yo-1-6-0-package-tgz.lock
+237 verbose tar unpack /home/jtrumpower/.npm/generator-karma/1.0.1/package.tgz
+238 silly lockFile 319c8467-lib-node-modules-generator-karma tar:///usr/local/lib/node_modules/generator-karma
+239 verbose lock tar:///usr/local/lib/node_modules/generator-karma /home/jtrumpower/.npm/319c8467-lib-node-modules-generator-karma.lock
+240 silly lockFile 388a9a03-enerator-karma-1-0-1-package-tgz tar:///home/jtrumpower/.npm/generator-karma/1.0.1/package.tgz
+241 verbose lock tar:///home/jtrumpower/.npm/generator-karma/1.0.1/package.tgz /home/jtrumpower/.npm/388a9a03-enerator-karma-1-0-1-package-tgz.lock
+242 verbose tar unpack /home/jtrumpower/.npm/generator-angular/0.15.1/package.tgz
+243 silly lockFile 919d8aa6-b-node-modules-generator-angular tar:///usr/local/lib/node_modules/generator-angular
+244 verbose lock tar:///usr/local/lib/node_modules/generator-angular /home/jtrumpower/.npm/919d8aa6-b-node-modules-generator-angular.lock
+245 silly lockFile 90cf6a36-rator-angular-0-15-1-package-tgz tar:///home/jtrumpower/.npm/generator-angular/0.15.1/package.tgz
+246 verbose lock tar:///home/jtrumpower/.npm/generator-angular/0.15.1/package.tgz /home/jtrumpower/.npm/90cf6a36-rator-angular-0-15-1-package-tgz.lock
+247 verbose tar unpack /home/jtrumpower/.npm/bower/1.7.7/package.tgz
+248 silly lockFile 1396471b-usr-local-lib-node-modules-bower tar:///usr/local/lib/node_modules/bower
+249 verbose lock tar:///usr/local/lib/node_modules/bower /home/jtrumpower/.npm/1396471b-usr-local-lib-node-modules-bower.lock
+250 silly lockFile 1dca57a2-ower-npm-bower-1-7-7-package-tgz tar:///home/jtrumpower/.npm/bower/1.7.7/package.tgz
+251 verbose lock tar:///home/jtrumpower/.npm/bower/1.7.7/package.tgz /home/jtrumpower/.npm/1dca57a2-ower-npm-bower-1-7-7-package-tgz.lock
+252 silly gunzTarPerm modes [ '775', '664' ]
+253 silly gunzTarPerm modes [ '775', '664' ]
+254 silly gunzTarPerm modes [ '775', '664' ]
+255 silly gunzTarPerm modes [ '775', '664' ]
+256 silly gunzTarPerm modes [ '775', '664' ]
+257 error tar.unpack untar error /home/jtrumpower/.npm/grunt-cli/0.1.13/package.tgz
+258 silly lockFile 466968dc-local-lib-node-modules-grunt-cli tar:///usr/local/lib/node_modules/grunt-cli
+259 silly lockFile 466968dc-local-lib-node-modules-grunt-cli tar:///usr/local/lib/node_modules/grunt-cli
+260 error tar.unpack untar error /home/jtrumpower/.npm/yo/1.6.0/package.tgz
+261 silly lockFile 7d7c7bef-ar-usr-local-lib-node-modules-yo tar:///usr/local/lib/node_modules/yo
+262 silly lockFile 7d7c7bef-ar-usr-local-lib-node-modules-yo tar:///usr/local/lib/node_modules/yo
+263 error tar.unpack untar error /home/jtrumpower/.npm/generator-karma/1.0.1/package.tgz
+264 silly lockFile 319c8467-lib-node-modules-generator-karma tar:///usr/local/lib/node_modules/generator-karma
+265 silly lockFile 319c8467-lib-node-modules-generator-karma tar:///usr/local/lib/node_modules/generator-karma
+266 error tar.unpack untar error /home/jtrumpower/.npm/generator-angular/0.15.1/package.tgz
+267 silly lockFile 919d8aa6-b-node-modules-generator-angular tar:///usr/local/lib/node_modules/generator-angular
+268 silly lockFile 919d8aa6-b-node-modules-generator-angular tar:///usr/local/lib/node_modules/generator-angular
+269 silly lockFile e550d5e6-npm-grunt-cli-0-1-13-package-tgz tar:///home/jtrumpower/.npm/grunt-cli/0.1.13/package.tgz
+270 silly lockFile e550d5e6-npm-grunt-cli-0-1-13-package-tgz tar:///home/jtrumpower/.npm/grunt-cli/0.1.13/package.tgz
+271 error tar.unpack untar error /home/jtrumpower/.npm/bower/1.7.7/package.tgz
+272 silly lockFile 1396471b-usr-local-lib-node-modules-bower tar:///usr/local/lib/node_modules/bower
+273 silly lockFile 1396471b-usr-local-lib-node-modules-bower tar:///usr/local/lib/node_modules/bower
+274 silly lockFile d15ea990-umpower-npm-yo-1-6-0-package-tgz tar:///home/jtrumpower/.npm/yo/1.6.0/package.tgz
+275 silly lockFile d15ea990-umpower-npm-yo-1-6-0-package-tgz tar:///home/jtrumpower/.npm/yo/1.6.0/package.tgz
+276 silly lockFile 388a9a03-enerator-karma-1-0-1-package-tgz tar:///home/jtrumpower/.npm/generator-karma/1.0.1/package.tgz
+277 silly lockFile 388a9a03-enerator-karma-1-0-1-package-tgz tar:///home/jtrumpower/.npm/generator-karma/1.0.1/package.tgz
+278 silly lockFile 90cf6a36-rator-angular-0-15-1-package-tgz tar:///home/jtrumpower/.npm/generator-angular/0.15.1/package.tgz
+279 silly lockFile 90cf6a36-rator-angular-0-15-1-package-tgz tar:///home/jtrumpower/.npm/generator-angular/0.15.1/package.tgz
+280 verbose lib/node_modules/grunt-cli unbuild
+281 silly lockFile 1dca57a2-ower-npm-bower-1-7-7-package-tgz tar:///home/jtrumpower/.npm/bower/1.7.7/package.tgz
+282 silly lockFile 1dca57a2-ower-npm-bower-1-7-7-package-tgz tar:///home/jtrumpower/.npm/bower/1.7.7/package.tgz
+283 verbose lib/node_modules/yo unbuild
+284 verbose lib/node_modules/generator-karma unbuild
+285 verbose lib/node_modules/generator-angular unbuild
+286 verbose lib/node_modules/bower unbuild
+287 error Error: EACCES, mkdir '/usr/local/lib/node_modules'
+287 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules']
+287 error   errno: 3,
+287 error   code: 'EACCES',
+287 error   path: '/usr/local/lib/node_modules',
+287 error   fstream_type: 'Directory',
+287 error   fstream_path: '/usr/local/lib/node_modules/grunt-cli',
+287 error   fstream_class: 'DirWriter',
+287 error   fstream_stack:
+287 error    [ '/usr/lib/nodejs/fstream/lib/writer.js:171:23',
+287 error      '/usr/lib/nodejs/mkdirp/index.js:46:53',
+287 error      'Object.oncomplete (fs.js:107:15)' ] }
+288 error Please try running this command again as root/Administrator.
+289 error System Linux 4.2.0-27-generic
+290 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "grunt-cli" "bower" "yo" "generator-karma" "generator-angular"
+291 error cwd /home/jtrumpower/the_war_room/the_war_room
+292 error node -v v0.10.25
+293 error npm -v 1.4.21
+294 error path /usr/local/lib/node_modules
+295 error fstream_path /usr/local/lib/node_modules/grunt-cli
+296 error fstream_type Directory
+297 error fstream_class DirWriter
+298 error code EACCES
+299 error errno 3
+300 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules'
+301 error fstream_stack /usr/lib/nodejs/fstream/lib/writer.js:171:23
+301 error fstream_stack /usr/lib/nodejs/mkdirp/index.js:46:53
+301 error fstream_stack Object.oncomplete (fs.js:107:15)
+302 verbose exit [ 3, true ]
