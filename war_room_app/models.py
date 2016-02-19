@@ -6,9 +6,12 @@ from django.db import models
 # Create your models here.
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Clan(models.Model):
-	name = models.CharField(max_length=200)
-	clan_tag = models.CharField(primary_key=True)
-	war_flag = models.BooleanField(default=False)
+		name = models.CharField(max_length=200)
+		clan_tag = models.CharField(primary_key=True, max_length=45)
+		war_flag = models.BooleanField(default=False)
+
+		def __str__(self):
+				return self.name
 
 
 @python_2_unicode_compatible  # only if you need to support Python 2
@@ -31,11 +34,11 @@ class War(models.Model):
 
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Member(models.Model):
+    clan_tag = models.ForeignKey(Clan, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=300, null=True, blank=True)
     game_name = models.CharField(max_length=300)
     thumbnail = models.ImageField(null=True, upload_to="./static/photos", blank=True)
     total_stars = models.IntegerField(default=0)
-    clan_tag = models.ForeignKey(Clan, on_delete=models.CASCADE, blank=True)
 
     def __str__(self):
         return self.game_name
@@ -61,7 +64,7 @@ class Dib(models.Model):
     time = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.title
+      	return self.member.game_name + " " + self.time
 
 
 @python_2_unicode_compatible  # only if you need to support Python 2
@@ -72,4 +75,4 @@ class Comment(models.Model):
     type = models.CharField(max_length=300, choices=(('comment', 'comment'), ('review', 'review')), default='comment')
 
     def __str__(self):
-        return self.title
+        return self.comment
