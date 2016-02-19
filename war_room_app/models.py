@@ -6,12 +6,12 @@ from django.db import models
 # Create your models here.
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Clan(models.Model):
-		name = models.CharField(max_length=200)
-		clan_tag = models.CharField(primary_key=True, max_length=45)
-		war_flag = models.BooleanField(default=False)
+	name = models.CharField(max_length=200)
+	clan_tag = models.CharField(primary_key=True, max_length=45)
+	war_flag = models.BooleanField(default=False)
 
-		def __str__(self):
-				return self.name
+	def __str__(self):
+			return self.name
 
 
 @python_2_unicode_compatible  # only if you need to support Python 2
