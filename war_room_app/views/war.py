@@ -47,7 +47,7 @@ class WarList(generics.ListCreateAPIView):
             for clan_member in enemyMembers:
                 m = Base(war=war, name = clan_member.get('name'))
                 m.save()
-        return serializer.save()
+        return war
 
 
 class WarDetail(generics.RetrieveUpdateDestroyAPIView):
