@@ -27,7 +27,7 @@ class WarList(generics.ListCreateAPIView):
         clan = clanResponse.json()
         enemyClan = enemyClanResponse.json()
 
-        myClan = Clan(name=clan.get('name'), clan_tag=serializer.validated_data.get('clan_id'))
+        myClan = Clan(name=clan.get('name'), clan_tag=serializer.validated_data.get('clan_tag'))
         myClan.save()
         
         serializer.validated_data['title'] = "{0} Vs {1}".format(clan.get('name'), enemyClan.get('name'))

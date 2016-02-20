@@ -8,16 +8,28 @@ from django.db import models
 class Clan(models.Model):
 	name = models.CharField(max_length=200)
 	clan_tag = models.CharField(primary_key=True, max_length=45)
-	war_flag = models.BooleanField(default=False)
+	war_flag = models.BooleanField(default=True)
 
 	def __str__(self):
 			return self.name
 
 
+war_sizes = (
+        (10, "10 Vs 10"),
+        (15, "15 Vs 15"),
+        (20, "20 Vs 20"),
+        (25, "25 Vs 25"),
+        (30, "30 Vs 30"),
+        (35, "35 Vs 35"),
+        (40, "40 Vs 40"),
+        (45, "45 Vs 45"),
+        (50, "50 Vs 50")
+    )
+
 @python_2_unicode_compatible  # only if you need to support Python 2
 class War(models.Model):
     title = models.CharField(max_length=100, null=True, blank=True)
-    size = models.IntegerField()
+    size = models.IntegerField(choices=war_sizes, default=10)
     start_time = models.DateTimeField(auto_now=True, )
     message = models.CharField(max_length=500, null=True, blank=True)
     clan_tag = models.CharField(max_length=45)
