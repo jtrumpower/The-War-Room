@@ -21,11 +21,11 @@ class WarList(generics.ListCreateAPIView):
         if(clanResponse.status_code == 404):
             raise CouldntRetrieveClan(detail="No Results for your clan tag")
 
-        if(enemyClans.status_code == 404):
+        if(enemyClanResponse.status_code == 404):
             raise CouldntRetrieveClan(detail="No Results for enemy clan tag")
 
         clan = clanResponse.json()
-        enemyClans = enemyClanResponse.json()
+        enemyClan = enemyClanResponse.json()
 
         myClan = Clan(name=clan.get('name'), clan_tag=serializer.validated_data.get('clan_id'))
         myClan.save()
@@ -39,6 +39,14 @@ class WarList(generics.ListCreateAPIView):
                 if len(mem) == 0:
                     m = Member(game_name=clan_member.get('name'), clan_tag=myClan)
                     m.save()
+
+        war = serializer.save()
+
+        enemyMembers = enemyClan.get('memberList')
+        if enemyMembers != None:
+            for clan_member in enemyMembers:
+                m = Base(war=war, name = clan_member.get('name'))
+                m.save()
         return serializer.save()
 
 
