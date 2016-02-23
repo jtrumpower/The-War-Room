@@ -53,6 +53,3 @@ class WarList(generics.ListCreateAPIView):
 class WarDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = War.objects.all()
     serializer_class = WarSerializer
-
-    def perform_update(self, serializer):
-        return War.objects.all()
