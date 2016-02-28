@@ -1,0 +1,10 @@
+<ul>
+	<li ng-repeat="war in wars">
+		<div>
+			<a ng-href="/wars/{{ war.id }}">
+				{{ war.title }}
+			</a>
+		</div>
+		<div>{{ war.size }}</div>
+	</li>
+</ul>

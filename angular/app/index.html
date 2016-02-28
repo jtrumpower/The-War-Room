@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <base href="/" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -23,18 +24,6 @@
     <!-- Add your site or application content here -->
     <ng-view />
 
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -50,8 +39,18 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/services/wars.js"></script>
+    <script src="scripts/services/members.js"></script>
+    <script src="scripts/services/clans.js"></script>
+    <script src="scripts/services/bases.js"></script>
+    <script src="scripts/services/dibs.js"></script>
+    <script src="scripts/services/comments.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/wars.js"></script>
+    <script src="scripts/controllers/war.js"></script>
+    <script src="scripts/controllers/new-war.js"></script>
+    <script src="scripts/controllers/members.js"></script>
+    <script src="scripts/controllers/member.js"></script>
     <!-- endbuild -->
-</body>
+  </body>
 </html>

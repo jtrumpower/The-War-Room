@@ -14,38 +14,41 @@ angular
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'theWarRoomApp_controllers',
+    'theWarRoomApp_services'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
+        controller: 'MainController',
         controllerAs: 'main'
       })
       .when('/wars', {
-        templateUrl: 'views/wars.html',
-        controller: 'warsCtrl',
+        templateUrl: 'views/wars/wars.html',
+        controller: 'WarsController',
         controllerAs: 'wars'
       })
       .when('/wars/new', {
-        templateUrl: 'views/new-war.html',
-        controller: 'newWarCtrl',
+        templateUrl: 'views/wars/new-war.html',
+        controller: 'NewWarController',
         controllerAs: 'newWar'
       })
-      .when('/wars/:war-id', {
-        templateUrl: 'views/war.html',
-        controller: 'warCtrl',
+      .when('/wars/:id', {
+        templateUrl: 'views/wars/war.html',
+        controller: 'WarController',
         controllerAs: 'war'
       })
       .when('/members', {
         templateUrl: 'views/members.html',
-        controller: 'membersCtrl',
+        controller: 'MembersController',
         controllerAs: 'members'
       })
-      .when('/members/:member-id', {
+      .when('/members/:id', {
         templateUrl: 'views/member.html',
-        controller: 'memberCtrl',
+        controller: 'MemberController',
         controllerAs: 'member'
       })
       .otherwise({
