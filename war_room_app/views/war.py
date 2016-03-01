@@ -27,8 +27,14 @@ class WarList(generics.ListCreateAPIView):
         clan = clanResponse.json()
         enemyClan = enemyClanResponse.json()
 
-        myClan = Clan(name=clan.get('name'), clan_tag=serializer.validated_data.get('clan_tag'))
-        myClan.save()
+        myClan = Clan.objects.filter(clan_tag=serializer.validated_data.get('clan_tag'))
+        if len(myClan) == 1:
+        	myClan = myClan[0];
+        elif len(myClan) > 1:
+        	raise CouldntRetrieveClan(detail="Not a unique clan tag")
+        else:
+        	myClan = Clan(name=clan.get('name'), clan_tag=serializer.validated_data.get('clan_tag'))
+        	myClan.save()
         
         serializer.validated_data['title'] = "{0} Vs {1}".format(clan.get('name'), enemyClan.get('name'))
         serializer.validated_data['clan_id'] = myClan.clan_tag
