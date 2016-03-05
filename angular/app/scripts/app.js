@@ -19,7 +19,7 @@ angular
     'theWarRoomApp_services',
     'ui.bootstrap'
   ])
-  .config(function ($routeProvider, $locationProvider, $resourceProvider) {
+  .config(function ($routeProvider, $locationProvider, $resourceProvider, $httpProvider) {
     //$locationProvider.html5Mode(true);
     $resourceProvider.defaults.stripTrailingSlashes = false;
     $routeProvider
@@ -66,4 +66,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
   });
