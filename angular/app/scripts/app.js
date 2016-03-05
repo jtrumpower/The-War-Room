@@ -16,27 +16,39 @@ angular
     'ngRoute',
     'ngTouch',
     'theWarRoomApp_controllers',
-    'theWarRoomApp_services'
+    'theWarRoomApp_services',
+    'ui.bootstrap'
   ])
-  .config(function ($routeProvider, $locationProvider) {
-    $locationProvider.html5Mode(true);
+  .config(function ($routeProvider, $locationProvider, $resourceProvider) {
+    //$locationProvider.html5Mode(true);
+    $resourceProvider.defaults.stripTrailingSlashes = false;
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainController',
         controllerAs: 'main'
       })
-      .when('/wars', {
+      .when('/clans', {
+        templateUrl: 'views/clans.html',
+        controller: 'ClansController',
+        controllerAs: 'clans'
+      })
+      .when('/clans/:id', {
+        templateUrl: 'views/clan.html',
+        controller: 'ClanController',
+        controllerAs: 'clan'
+      })
+      .when('/clans/:id/wars', {
         templateUrl: 'views/wars/wars.html',
         controller: 'WarsController',
-        controllerAs: 'wars'
+        controllerAs: 'clans'
       })
-      .when('/wars/new', {
-        templateUrl: 'views/wars/new-war.html',
-        controller: 'NewWarController',
-        controllerAs: 'newWar'
+      .when('/clans/:id/wars/latest', {
+        templateUrl: 'views/wars/war.html',
+        controller: 'WarController',
+        controllerAs: 'clans'
       })
-      .when('/wars/:id', {
+      .when('/clans/clanId:/wars/:warId', {
         templateUrl: 'views/wars/war.html',
         controller: 'WarController',
         controllerAs: 'war'

@@ -1,0 +1,20 @@
+<form name="createClanForm" ng-submit="createNewClan()">
+  <div class="modal-header">
+    <h3 class="modal-title">Create new Clan</h3>
+  </div>
+  <div class="modal-body">
+    <label for="clan-tag">
+      Clan Tag: <input type="text" name="clan_tag" id="clan-tag" ng-model="clan.clan_tag" required placeholder="Clan Tag" ng-change="error=null" />
+    </label>
+    <div class="error" ng-show="createClanForm.clan_tag.$touched && createClanForm.clan_tag.$invalid">
+      This field is required
+    </div>
+    <div class="error" ng-show="error">
+      {{ error }}
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-disabled="createClanForm.clan_tag.$invalid" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+  </div>
+</form>

@@ -81,3 +81,19 @@ body {
     border-bottom: 0;
   }
 }
+
+#main {
+  text-align: center;
+}
+
+.blue-button {
+  border-radius: 10px;
+  border: 0;
+  background-color: #00b3ee;
+  color: white;
+  padding: 5px 10px;
+}
+
+.error {
+  color: Red;
+}

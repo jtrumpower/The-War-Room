@@ -1,0 +1,13 @@
+<div class="container" >
+  <div class="page-header">
+    <h1>{{ clan.name }}</h1>
+    <p class="lead">See clan members below</p>
+  </div>
+
+  <uib-accordion close-others="oneAtATime">
+    <uib-accordion-group heading="{{ member.game_name + ((member.full_name) ? ' (' + member.full_name + ')' : '') }}" ng-repeat="member in members track by $index">
+      Total stars: {{ member.total_stars }}
+      <img ng-src="{{ member.thumbnail }}" />
+    </uib-accordion-group>
+  </uib-accordion>
+</div>

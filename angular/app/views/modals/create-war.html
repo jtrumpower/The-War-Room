@@ -1,0 +1,37 @@
+<form name="warForm" ng-submit="createNewClan()">
+  <div class="modal-header">
+    <h3 class="modal-title">Create new war</h3>
+  </div>
+  <div class="modal-body">
+    <label for="war-size">
+      War size:
+      <select id="war-size" ng-init="war.size = options[0]" ng-model="war.size" ng-options="option.name for option in options" ng-change="error=null"></select>
+    </label>
+    <br>
+    <label for="clan-tag">
+      Clan tag: <input type="text" name="clan_tag" id="clan-tag" ng-model="war.clan_tag" placeholder="Clan tag" ng-change="clanError=null" required />
+    </label>
+    <br>
+    <div class="error" ng-show="warForm.clan_tag.$touched && warForm.clan_tag.$invalid">
+      Clan tag is required
+    </div>
+    <label for="enemy-clan-tag">
+      Enemy clan tag: <input type="text" name="enemy_tag" id="enemy-clan-tag" ng-model="war.enemy_clan_tag" placeholder="Enemy clan tag" required ng-change="enemyClanError=null" />
+    </label>
+    <br>
+    <div class="error" ng-show="warForm.enemy_tag.$touched && warForm.enemy_tag.$invalid">
+      Enemy clan tag is required
+    </div>
+    <label for="message">
+      Message (optional): <input type="text" id="message" ng-model="war.message" placeholder="(optional)" />
+    </label>
+    <br>
+    <div class="error" ng-show="error">
+      {{ error }}
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-disabled="warForm.enemy_tag.$invalid || warForm.clan_tag.$invalid" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+  </div>
+</form>
