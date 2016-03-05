@@ -1,9 +1,12 @@
 from war_room_app.models import Clan, Member
-from war_room_app.serializers import ClanSerializer
+from war_room_app.serializers import ClanSerializer, MemberSerializer
 from rest_framework import generics
 from war_room_app.clash_api import clans
 from rest_framework.renderers import JSONRenderer
 from war_room_app.exceptions import CouldntRetrieveClan
+from rest_framework import viewsets
+from rest_framework.response import Response
+from rest_framework.decorators import list_route, detail_route
 import urllib
 
 
@@ -41,3 +44,12 @@ class ClanDetail(generics.RetrieveUpdateDestroyAPIView):
 
     def perform_update(self, serializer):
         return Clan.objects.all()
+
+
+class ClanMembers(viewsets.ViewSet):
+    
+    def get_members(self, request, clan_tag):
+        queryset = Member.objects.filter(clan_tag=clan_tag)
+        serializer = MemberSerializer(queryset, many=True)
+        return Response(serializer.data)
+

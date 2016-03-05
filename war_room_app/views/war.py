@@ -7,6 +7,8 @@ from rest_framework import generics
 from war_room_app.clash_api import clans
 from rest_framework.renderers import JSONRenderer
 from war_room_app.exceptions import CouldntRetrieveClan
+from rest_framework import viewsets
+from rest_framework.response import Response
 import urllib
 import logging
 
@@ -65,3 +67,22 @@ class WarList(generics.ListCreateAPIView):
 class WarDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = War.objects.all()
     serializer_class = WarSerializer
+
+
+class WarByClan(viewsets.ViewSet):
+
+    def get_all_wars(self, request, clan_tag):
+        queryset = War.objects.filter(clan=clan_tag)
+        serializer = WarSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+    def get_by_clan(self, request, clan_tag, war_id):
+        queryset = War.objects.get(pk=war_id, clan=clan_tag)
+        serializer = WarSerializer(queryset)
+        return Response(serializer.data)
+
+    def get_latest_by_clan(self, request, clan_tag):
+        queryset = War.objects.filter(clan=clan_tag).latest()
+        serializer = WarSerializer(queryset)
+        return Response(serializer.data)
+
