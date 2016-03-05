@@ -43,6 +43,9 @@ class War(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        get_latest_by = 'start_time'
+
 
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Member(models.Model):

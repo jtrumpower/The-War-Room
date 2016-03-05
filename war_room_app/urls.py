@@ -8,6 +8,10 @@ from war_room_app.views import dib
 
 urlpatterns = [
     url(r'^clans/$', clan.ClanList.as_view()),
+    url(ur'^clans/(?P<clan_tag>.*)/wars/latest/$', war.WarByClan.as_view({'get': 'get_latest_by_clan'})),
+    url(ur'^clans/(?P<clan_tag>.*)/wars/(?P<war_id>[0-9]+)/$', war.WarByClan.as_view({'get': 'get_by_clan'})),
+    url(ur'^clans/(?P<clan_tag>.*)/wars/$', war.WarByClan.as_view({'get': 'get_all_wars'})),
+    url(ur'^clans/(?P<clan_tag>.*)/members/$', clan.ClanMembers.as_view({'get': 'get_members'})),
     url(ur'^clans/(?P<pk>.*)/$', clan.ClanDetail.as_view()),
     url(r'^wars/$', war.WarList.as_view()),
     url(r'^wars/(?P<pk>[0-9]+)/$', war.WarDetail.as_view()),

@@ -10,13 +10,13 @@ class ClanSerializer(serializers.ModelSerializer):
 class WarSerializer(serializers.ModelSerializer):
   class Meta:
     model = War
-    fields = ('id', 'title', 'size', 'message', 'clan_tag', 'enemy_clan_tag', 'stars', 'enemy_stars', 'destruction', 'enemy_destruction', 'clan')
+    fields = ('id', 'title', 'size', 'message', 'clan_tag', 'enemy_clan_tag', 'stars', 'enemy_stars', 'destruction', 'enemy_destruction', 'start_time', 'clan')
 
 
 class MemberSerializer(serializers.ModelSerializer):
   class Meta:
     model = Member
-    fields = ('id', 'full_name', 'game_name', 'thumbnail', 'total_stars')
+    fields = ('id', 'clan_tag', 'full_name', 'game_name', 'thumbnail', 'total_stars')
 
 
 class BaseSerializer(serializers.ModelSerializer):
