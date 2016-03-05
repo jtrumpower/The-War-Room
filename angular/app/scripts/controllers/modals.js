@@ -68,7 +68,7 @@ controllers.controller('CreateWarModalCtrl', ['$scope', '$uibModalInstance', 'Wa
       $scope.war.size = $scope.war.size.value
       WarFactory.save($scope.war).$promise.then(
         function success(json) {
-          $location.path("/clans/" + json.clan_id + "/wars/latest");
+          $location.path("/clans/" + json.clan + "/wars/latest");
           $uibModalInstance.dismiss('cancel');
         },
         function fail(response) {
