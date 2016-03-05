@@ -72,6 +72,7 @@ controllers.controller('CreateWarModalCtrl', ['$scope', '$uibModalInstance', 'Wa
           $uibModalInstance.dismiss('cancel');
         },
         function fail(response) {
+          var data = response.data;
           if(data.detail != undefined) {
             $scope.error = data.detail;
           } else {
