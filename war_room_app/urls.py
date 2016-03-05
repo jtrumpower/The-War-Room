@@ -8,7 +8,7 @@ from war_room_app.views import dib
 
 urlpatterns = [
     url(r'^clans/$', clan.ClanList.as_view()),
-    url(r'^clans/(?P<pk>[0-9]+)/$', clan.ClanDetail.as_view()),
+    url(ur'^clans/(?P<pk>.*)/$', clan.ClanDetail.as_view()),
     url(r'^wars/$', war.WarList.as_view()),
     url(r'^wars/(?P<pk>[0-9]+)/$', war.WarDetail.as_view()),
     url(r'^members/$', member.MemberList.as_view()),

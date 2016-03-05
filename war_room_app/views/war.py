@@ -8,6 +8,7 @@ from war_room_app.clash_api import clans
 from rest_framework.renderers import JSONRenderer
 from war_room_app.exceptions import CouldntRetrieveClan
 import urllib
+import logging
 
 
 class WarList(generics.ListCreateAPIView):
@@ -18,24 +19,27 @@ class WarList(generics.ListCreateAPIView):
         clanResponse = clans.get_clan_by_tag(urllib.quote_plus(serializer.validated_data.get('clan_tag')))
         enemyClanResponse = clans.get_clan_by_tag(urllib.quote_plus(serializer.validated_data.get('enemy_clan_tag')))
 
-        if(clanResponse.status_code == 404):
+        if clanResponse.status_code == 404:
             raise CouldntRetrieveClan(detail="No Results for your clan tag")
 
-        if(enemyClanResponse.status_code == 404):
+        if enemyClanResponse.status_code == 404:
             raise CouldntRetrieveClan(detail="No Results for enemy clan tag")
 
         clan = clanResponse.json()
         enemyClan = enemyClanResponse.json()
 
-        myClan = Clan.objects.filter(clan_tag=serializer.validated_data.get('clan_tag'))
+        myClanTag = serializer.validated_data.get('clan_tag')[1:]
+        enemyClanTag = serializer.validated_data.get('enemy_clan_tag')[1:]
+
+        myClan = Clan.objects.filter(clan_tag=myClanTag)
         if len(myClan) == 1:
-        	myClan = myClan[0];
+            myClan = myClan[0];
         elif len(myClan) > 1:
-        	raise CouldntRetrieveClan(detail="Not a unique clan tag")
+            raise CouldntRetrieveClan(detail="Not a unique clan tag")
         else:
-        	myClan = Clan(name=clan.get('name'), clan_tag=serializer.validated_data.get('clan_tag'))
-        	myClan.save()
-        
+            myClan = Clan(name=clan.get('name'), clan_tag=clan.get("tag")[1:])
+            myClan.save()
+
         serializer.validated_data['title'] = "{0} Vs {1}".format(clan.get('name'), enemyClan.get('name'))
         serializer.validated_data['clan_id'] = myClan.clan_tag
         members = clan.get('memberList')
@@ -46,6 +50,8 @@ class WarList(generics.ListCreateAPIView):
                     m = Member(game_name=clan_member.get('name'), clan_tag=myClan)
                     m.save()
 
+        print serializer.validated_data.get('clan_tag')
+        print serializer.validated_data.get('clan_id')
         war = serializer.save()
 
         enemyMembers = enemyClan.get('memberList')

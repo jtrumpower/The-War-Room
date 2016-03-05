@@ -6,7 +6,7 @@ from django.db import models
 # Create your models here.
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Clan(models.Model):
-	name = models.CharField(max_length=200)
+	name = models.CharField(max_length=200, null=True, blank=True)
 	clan_tag = models.CharField(primary_key=True, max_length=45)
 	war_flag = models.BooleanField(default=True)
 
@@ -30,7 +30,7 @@ war_sizes = (
 class War(models.Model):
     title = models.CharField(max_length=100, null=True, blank=True)
     size = models.IntegerField(choices=war_sizes, default=10)
-    start_time = models.DateTimeField(auto_now=True, )
+    start_time = models.DateTimeField(auto_now=True)
     message = models.CharField(max_length=500, null=True, blank=True)
     clan_tag = models.CharField(max_length=45)
     enemy_clan_tag = models.CharField(max_length=45)

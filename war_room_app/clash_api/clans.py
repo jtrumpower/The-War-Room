@@ -6,12 +6,16 @@ headers = {'Accept': 'application/json', 'authorization': 'Bearer eyJ0eXAiOiJKV1
 def get_clan_by_name(clan_name):
     payload = {'name': clan_name}
     r = requests.get(_url("/clans"), params=payload, headers=headers)
-    return r.json()
+    items = r.json().get('items')
+    if len(items) > 0:
+    		return items[0]
+    else:
+    		return None
 
 
 def get_clan_by_tag(clan_tag):
     r = requests.get(_url("/clans/{}").format(clan_tag), headers=headers)
-    return r.json()
+    return r
 
 def _url(path):
     return 'https://api.clashofclans.com/v1' + path
