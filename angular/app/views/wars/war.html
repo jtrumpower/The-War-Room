@@ -1,3 +1,11 @@
 <div>
 	{{ war.title }}
 </div>
+
+<div>
+  bases: <select ng-init="base.name = bases[0]" ng-model="base" ng-options="base.name for base in bases"></select>
+</div>
+
+<div>
+  members: <select ng-init="member.game_name = bases[0]" ng-model="member" ng-options="member.game_name for member in members"></select>
+</div>
