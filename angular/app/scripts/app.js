@@ -46,9 +46,9 @@ angular
       .when('/clans/:id/wars/latest', {
         templateUrl: 'views/wars/war.html',
         controller: 'WarController',
-        controllerAs: 'clans'
+        controllerAs: 'war'
       })
-      .when('/clans/clanId:/wars/:warId', {
+      .when('/clans/:clanId/wars/:warId', {
         templateUrl: 'views/wars/war.html',
         controller: 'WarController',
         controllerAs: 'war'

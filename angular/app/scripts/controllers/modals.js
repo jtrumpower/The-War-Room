@@ -1,6 +1,6 @@
 var controllers = controllers || angular.module('theWarRoomApp_controllers', []);
 
-controllers.controller('CreateClanModalCtrl', ['$scope', '$uibModalInstance', 'ClanFactory',
+/*controllers.controller('CreateClanModalCtrl', ['$scope', '$uibModalInstance', 'ClanFactory',
   function ($scope, $uibModalInstance, ClanFactory) {
     $scope.ok = function () {
       ClanFactory.save($scope.clan).$promise.then(
@@ -22,7 +22,7 @@ controllers.controller('CreateClanModalCtrl', ['$scope', '$uibModalInstance', 'C
       $uibModalInstance.dismiss('cancel');
     };
   }
-]);
+]);*/
 
 controllers.controller('SearchClanModalCtrl', ['$scope', '$uibModalInstance', 'ClanFactory', '$location',
   function ($scope, $uibModalInstance, ClanFactory, $location) {
