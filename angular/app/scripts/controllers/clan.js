@@ -14,7 +14,7 @@ controllers.controller('ClanController',
 
     ClanFactory.members({ id: $routeParams.id }).$promise.then(
       function success(json) {
-        $scope.members = json
+        $scope.members = json;
       },
       function fail(json) {
 
