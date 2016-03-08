@@ -22,7 +22,7 @@ angular
     'angular-repeat-n'
   ])
   .config(function ($routeProvider, $locationProvider, $resourceProvider, $httpProvider) {
-    //$locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
     $resourceProvider.defaults.stripTrailingSlashes = false;
     $routeProvider
       .when('/', {

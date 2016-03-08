@@ -22,7 +22,7 @@ class MemberSerializer(serializers.ModelSerializer):
 class BaseSerializer(serializers.ModelSerializer):
   class Meta:
     model = Base
-    fields = ('id', 'name', 'war',)
+    fields = ('id', 'name', 'war')
 
 
 class DibSerializer(serializers.ModelSerializer):
@@ -35,3 +35,16 @@ class CommentSerializer(serializers.ModelSerializer):
   class Meta:
     model = Comment
     fields = ('id', 'base', 'member', 'comment', 'type')
+
+
+class BaseCommentDibSerializer(serializers.Serializer):
+  comments = CommentSerializer(many=True)
+  dibs = DibSerializer(many=True)
+  base = BaseSerializer()
+
+
+class FullWarSerializer(serializers.Serializer):
+  clan = ClanSerializer(required=True)
+  war = WarSerializer()
+  bases = BaseCommentDibSerializer(many=True)
+  members = MemberSerializer(many=True)
