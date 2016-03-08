@@ -1,8 +1,5 @@
-from war_room_app.models import War
-from war_room_app.models import Member
-from war_room_app.models import Clan
-from war_room_app.models import Base
-from war_room_app.serializers import WarSerializer
+from war_room_app.models import War, Member, Clan, Base, Dib, Comment
+from war_room_app.serializers import WarSerializer, BaseCommentDibSerializer, BaseSerializer, ClanSerializer, MemberSerializer, CommentSerializer, DibSerializer, FullWarSerializer
 from rest_framework import generics
 from war_room_app.clash_api import clans
 from rest_framework.renderers import JSONRenderer
@@ -10,7 +7,6 @@ from war_room_app.exceptions import CouldntRetrieveClan
 from rest_framework import viewsets
 from rest_framework.response import Response
 import urllib
-import logging
 
 
 class WarList(generics.ListCreateAPIView):
@@ -77,12 +73,54 @@ class WarByClan(viewsets.ViewSet):
         return Response(serializer.data)
 
     def get_by_clan(self, request, clan_tag, war_id):
-        queryset = War.objects.get(pk=war_id, clan=clan_tag)
-        serializer = WarSerializer(queryset)
-        return Response(serializer.data)
+        clan = ClanSerializer(Clan.objects.get(clan_tag=clan_tag))
+        war = WarSerializer(War.objects.get(pk=war_id))
+        members = MemberSerializer(Member.objects.filter(clan_tag=clan.data.get('clan_tag')), many=True)
+        bases = Base.objects.filter(war=war.data.get('id'))
+        base_comments_dibs = [];
+        for base in bases:
+            comments = CommentSerializer(Comment.objects.filter(base=base.id), many=True)
+            dibs = DibSerializer(Dib.objects.filter(base=base.id), many=True)
+
+            base_serializer = BaseSerializer(base);
+            data = { 'base': base_serializer.data }
+            if len(comments.data) > 0:
+                data['comments'] = comments.data
+
+            if len(dibs.data) > 0:
+                data['dibs'] = dibs.data
+
+            base_comment_dib = BaseCommentDibSerializer(data=data)
+            base_comment_dib.is_valid()
+            base_comments_dibs.append(base_comment_dib.data)
+
+        full_war_serializer = FullWarSerializer(data={ 'clan': clan.data, 'war': war.data , 'bases': base_comments_dibs, 'members': members.data })
+        full_war_serializer.is_valid()
+        return Response(full_war_serializer.data)
 
     def get_latest_by_clan(self, request, clan_tag):
-        queryset = War.objects.filter(clan=clan_tag).latest()
-        serializer = WarSerializer(queryset)
-        return Response(serializer.data)
+        clan = ClanSerializer(Clan.objects.get(clan_tag=clan_tag))
+        war = WarSerializer(War.objects.filter(clan=clan.data.get('clan_tag')).latest())
+        members = MemberSerializer(Member.objects.filter(clan_tag=clan.data.get('clan_tag')), many=True)
+        bases = Base.objects.filter(war=war.data.get('id'))
+        base_comments_dibs = [];
+        for base in bases:
+            comments = CommentSerializer(Comment.objects.filter(base=base.id), many=True)
+            dibs = DibSerializer(Dib.objects.filter(base=base.id), many=True)
+
+            base_serializer = BaseSerializer(base);
+            data = { 'base': base_serializer.data }
+            if len(comments.data) > 0:
+                data['comments'] = comments.data
+
+            if len(dibs.data) > 0:
+                data['dibs'] = dibs.data
+
+            base_comment_dib = BaseCommentDibSerializer(data=data)
+            base_comment_dib.is_valid()
+            base_comments_dibs.append(base_comment_dib.data)
+
+        full_war_serializer = FullWarSerializer(data={ 'clan': clan.data, 'war': war.data , 'bases': base_comments_dibs, 'members': members.data })
+        full_war_serializer.is_valid()
+        return Response(full_war_serializer.data)
 

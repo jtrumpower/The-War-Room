@@ -65,6 +65,7 @@ class Base(models.Model):
     name = models.CharField(max_length=200)
     destruction = models.DecimalField(blank=True, null=True, max_digits=10, decimal_places=2)
     stars = models.IntegerField(blank=True, null=True)
+    position = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return self.name
