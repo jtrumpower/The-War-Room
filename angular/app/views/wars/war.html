@@ -1,11 +1,22 @@
-<div>
-	{{ war.title }}
-</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      <div style="text-align: center;">
+        {{ war.title }}
+      </div>
 
-<div>
-  bases: <select ng-init="base.name = bases[0]" ng-model="base" ng-options="base.name for base in bases"></select>
-</div>
-
-<div>
-  members: <select ng-init="member.game_name = bases[0]" ng-model="member" ng-options="member.game_name for member in members"></select>
+      <div ng-repeat-n="war.size" class="row" base-row>
+        <div class="col-sm-5" style="float: left;">
+          {{ $index + 1 }}. <select ng-init="base.name = bases[0]" ng-model="base" ng-options="base.base.name for base in bases"></select>
+        </div>
+        -
+        <div class="col-sm-1" style="float:right;">
+          <button type="button" class="btn btn-primary" ng-click="call(base, member)">Call</button>
+        </div>
+        <div class="col-sm-5" style="float:right;">
+          <select ng-init="member.game_name = bases[0]" ng-model="member" ng-options="member.game_name for member in members"></select>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -13,3 +13,19 @@ directives.directive('convertToNumber', function() {
     }
   };
 });
+
+directives.directive('baseRow', function() {
+  return {
+    link: function(scope, element, attrs, ngModel) {
+
+    },
+    controller: ['$scope', 'DibFactory',
+      function($scope, DibFactory) {
+        $scope.call = function(base, member) {
+          console.log(base, member);
+          DibFactory.save({ base: base.id, member: member.id });
+        }
+      }
+    ]
+  };
+});

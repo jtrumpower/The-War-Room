@@ -17,7 +17,9 @@ angular
     'ngTouch',
     'theWarRoomApp_controllers',
     'theWarRoomApp_services',
-    'ui.bootstrap'
+    'theWarRoomApp_directives',
+    'ui.bootstrap',
+    'angular-repeat-n'
   ])
   .config(function ($routeProvider, $locationProvider, $resourceProvider, $httpProvider) {
     //$locationProvider.html5Mode(true);
