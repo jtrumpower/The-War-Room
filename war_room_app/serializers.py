@@ -22,13 +22,14 @@ class MemberSerializer(serializers.ModelSerializer):
 class BaseSerializer(serializers.ModelSerializer):
   class Meta:
     model = Base
-    fields = ('id', 'name', 'war')
+    fields = ('id', 'name', 'war', 'position')
 
 
 class DibSerializer(serializers.ModelSerializer):
   class Meta:
     model = Dib
     fields = ('id', 'member', 'base', 'stars')
+
 
 
 class CommentSerializer(serializers.ModelSerializer):
