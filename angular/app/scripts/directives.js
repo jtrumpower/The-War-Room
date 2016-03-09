@@ -40,7 +40,7 @@ directives.directive('baseRow', function() {
         };
 
         $scope.getMemberName = function (members, id) {
-          for (i = 0; i < members.length; i++) {
+          for (var i = 0; i < members.length; i++) {
             var member = members[i];
             if(member.id == id) {
               return member.game_name;
@@ -49,17 +49,17 @@ directives.directive('baseRow', function() {
         };
 
         $scope.getPosition = function (bases, idx) {
-          for (i = 0; i < bases.length; i++) {
+          for (var i = 0; i < bases.length; i++) {
             var row = bases[i];
             if(row.base.position == idx + 1) {
               return row.base
             }
           }
           return null;
-        }
+        };
 
         $scope.getBaseIndex = function (bases, idx) {
-          for (i = 0; i < bases.length; i++) {
+          for (var i = 0; i < bases.length; i++) {
             var row = bases[i];
             if(row.base.position == idx + 1) {
               return i
