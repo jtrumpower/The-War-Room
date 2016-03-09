@@ -19,11 +19,53 @@ directives.directive('baseRow', function() {
     link: function(scope, element, attrs, ngModel) {
 
     },
-    controller: ['$scope', 'DibFactory',
-      function($scope, DibFactory) {
-        $scope.call = function(base, member) {
-          console.log(base, member);
-          DibFactory.save({ base: base.id, member: member.id });
+    controller: ['$scope', 'DibFactory', 'BaseFactory', '$route',
+      function($scope, DibFactory, BaseFactory, $route) {
+        $scope.row = null;
+        $scope.call = function(base, member, idx) {
+          console.log(base, member, idx);
+          DibFactory.save({ base: base.id, member: member.id }).$promise.then(
+            function success(){
+              $route.reload();
+            },
+            function fail() {
+
+            }
+          );
+          if(base.position == null) {
+            base.position = idx + 1;
+            BaseFactory.update({ id: base.id }, base);
+          }
+
+        };
+
+        $scope.getMemberName = function (members, id) {
+          for (i = 0; i < members.length; i++) {
+            var member = members[i];
+            if(member.id == id) {
+              return member.game_name;
+            }
+          }
+        };
+
+        $scope.getPosition = function (bases, idx) {
+          for (i = 0; i < bases.length; i++) {
+            var row = bases[i];
+            if(row.base.position == idx + 1) {
+              return row.base
+            }
+          }
+          return null;
+        }
+
+        $scope.getBaseIndex = function (bases, idx) {
+          for (i = 0; i < bases.length; i++) {
+            var row = bases[i];
+            if(row.base.position == idx + 1) {
+              return i
+            }
+          }
+          return null;
         }
       }
     ]

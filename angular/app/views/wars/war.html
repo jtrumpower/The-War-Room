@@ -1,20 +1,23 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <div style="text-align: center;">
         {{ war.title }}
       </div>
 
       <div ng-repeat-n="war.size" class="row" base-row>
-        <div class="col-sm-5" style="float: left;">
-          {{ $index + 1 }}. <select ng-init="base.name = bases[0]" ng-model="base" ng-options="base.base.name for base in bases"></select>
+        <div class="col-sm-5" style="float: left;" >
+          {{ $index + 1 }}.
+          <select ng-model="row" ng-show="!getPosition(bases, $index)" ng-init="row = bases[getBaseIndex(bases, $index) || 0]" ng-options="row.base.name for row in bases track by row.base.id"></select>
+          <span ng-if="getPosition(bases, $index)">{{ getPosition(bases, $index).name }}</span>
         </div>
         -
         <div class="col-sm-1" style="float:right;">
-          <button type="button" class="btn btn-primary" ng-click="call(base, member)">Call</button>
+          <button type="button" class="btn btn-primary" ng-click="call(row.base, member, $index)">Call</button>
         </div>
         <div class="col-sm-5" style="float:right;">
-          <select ng-init="member.game_name = bases[0]" ng-model="member" ng-options="member.game_name for member in members"></select>
+          <p ng-repeat="dib in row.dibs">{{ getMemberName(members, dib.member) }}</p>
+          <select ng-init="member = members[0]" ng-model="member" ng-options="member.game_name for member in members"></select>
         </div>
       </div>
     </div>
