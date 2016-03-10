@@ -63,9 +63,9 @@ controllers.controller('CreateWarModalCtrl', ['$scope', '$uibModalInstance', 'Wa
       { name: "40 vs 40", value: 40 },
       { name: "45 vs 45", value: 45 },
       { name: "50 vs 50", value: 50 }
-    ]
+    ];
     $scope.ok = function () {
-      $scope.war.size = $scope.war.size.value
+      $scope.war.size = $scope.war.size.value;
       WarFactory.save($scope.war).$promise.then(
         function success(json) {
           $location.path("/clans/" + json.clan + "/wars/latest");
