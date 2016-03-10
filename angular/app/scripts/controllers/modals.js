@@ -87,3 +87,39 @@ controllers.controller('CreateWarModalCtrl', ['$scope', '$uibModalInstance', 'Wa
     };
   }
 ]);
+
+controllers.controller('UpdateDibModalCtrl',
+  function ($scope, $uibModalInstance, dib, DibFactory) {
+    $scope.dib = dib;
+    var initStars = dib.stars;
+    var initDest = dib.destruction;
+    $scope.ok = function () {
+      console.log(dib);
+      DibFactory.update({ id: dib.id }, dib).$promise.then(
+        function success(json) {
+          $uibModalInstance.dismiss('done');
+        },
+        function fail(response) {
+          var data = response.data;
+          if(data.detail != undefined) {
+            $scope.error = data.detail;
+          } else {
+            $scope.error = "An error occured while adding clan";
+          }
+        }
+      );
+    };
+
+    $scope.$on("modal.closing", function(result, dismissed, a, c) {
+      console.log(result, dismissed, a, c);
+      if(dismissed != "done") {
+        dib.stars = initStars;
+        dib.destruction = initDest;
+      }
+    });
+
+    $scope.cancel = function () {
+      $uibModalInstance.dismiss('cancel');
+    };
+  }
+);
