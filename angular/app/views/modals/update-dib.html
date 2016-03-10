@@ -1,0 +1,27 @@
+  <form name="updateDibForm" ng-submit="updateDib()">
+    <div class="modal-header">
+      <h3 class="modal-title">Report Attack</h3>
+    </div>
+    <div class="modal-body">
+      <label for="stars">
+        Stars: <input type="number" min="0" max="3" name="stars" id="stars" ng-model="dib.stars" required placeholder="Stars" ng-change="error=null" />
+      </label>
+      <div class="error" ng-show="updateDibForm.stars.$touched && updateDibForm.stars.$invalid">
+        This field is required
+      </div>
+      <br>
+      <label for="destruction">
+        Destruction: <input type="number" min="0" max="100" step="0.01" name="destruction" id="destruction" ng-model="dib.destruction" required placeholder="Destruction" ng-change="error=null" />
+      </label>
+      <div class="error" ng-show="updateDibForm.destruction.$touched && updateDibForm.destruction.$invalid">
+        This field is required
+      </div>
+      <div class="error" ng-show="error">
+        {{ error }}
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" type="button" ng-disabled="updateDibForm.stars.$invalid || updateDibForm.destruction.$invalid" ng-click="ok()">OK</button>
+      <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+  </form>

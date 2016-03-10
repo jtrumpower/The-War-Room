@@ -19,8 +19,8 @@ directives.directive('baseRow', function() {
     link: function(scope, element, attrs, ngModel) {
 
     },
-    controller: ['$scope', 'DibFactory', 'BaseFactory', '$route',
-      function($scope, DibFactory, BaseFactory, $route) {
+    controller: ['$scope', 'DibFactory', 'BaseFactory', '$route', '$uibModal',
+      function($scope, DibFactory, BaseFactory, $route, $uibModal) {
         $scope.row = null;
         $scope.call = function(base, member, idx) {
           console.log(base, member, idx);
@@ -37,6 +37,18 @@ directives.directive('baseRow', function() {
             BaseFactory.update({ id: base.id }, base);
           }
 
+        };
+
+        $scope.dibModal = function(dib) {
+          console.log(dib);
+          var modalInstance = $uibModal.open({
+            templateUrl: "/views/modals/update-dib.html",
+            controller: 'UpdateDibModalCtrl',
+            size: "sm",
+            resolve: {
+              dib: dib
+            }
+          });
         };
 
         $scope.getMemberName = function (members, id) {

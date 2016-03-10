@@ -10,13 +10,28 @@
           {{ $index + 1 }}.
           <select ng-model="row" ng-show="!getPosition(bases, $index)" ng-init="row = bases[getBaseIndex(bases, $index) || 0]" ng-options="row.base.name for row in bases track by row.base.id"></select>
           <span ng-if="getPosition(bases, $index)">{{ getPosition(bases, $index).name }}</span>
+
+          <div class="col-sm-2" style="float:right;right: -10px;">
+            <button type="button" class="btn btn-primary btn-xs" ng-click="call(row.base, member, $index)">Comment</button>
+          </div>
+          <div class="col-sm-2" style="float:right;">
+            <button type="button" class="btn btn-primary btn-xs" ng-click="call(row.base, member, $index)">Review</button>
+          </div>
         </div>
+
         -
         <div class="col-sm-1" style="float:right;">
-          <button type="button" class="btn btn-primary" ng-click="call(row.base, member, $index)">Call</button>
+          <button type="button" class="btn btn-primary btn-xs" ng-click="call(row.base, member, $index)">Call</button>
         </div>
         <div class="col-sm-5" style="float:right;">
-          <p ng-repeat="dib in row.dibs">{{ getMemberName(members, dib.member) }}</p>
+          <p ng-repeat="dib in row.dibs">
+            <a href="#" ng-click="dibModal(dib)">
+              {{ getMemberName(members, dib.member) }}
+            </a>
+            <span ng-repeat-n="dib.stars">
+              <img width="30" height="30" src="images/silver-star.png" />
+            </span>
+          </p>
           <select ng-init="member = members[0]" ng-model="member" ng-options="member.game_name for member in members"></select>
         </div>
       </div>
