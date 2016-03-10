@@ -28,7 +28,8 @@ class BaseSerializer(serializers.ModelSerializer):
 class DibSerializer(serializers.ModelSerializer):
   class Meta:
     model = Dib
-    fields = ('id', 'member', 'base', 'stars')
+    fields = ('id', 'member', 'base', 'stars', 'destruction')
+    extra_kwargs= {'destruction': { 'coerce_to_string': False}}
 
 
 
