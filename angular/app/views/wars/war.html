@@ -8,14 +8,14 @@
       <div ng-repeat-n="war.size" class="row" base-row>
         <div class="col-sm-5" style="float: left;" >
           {{ $index + 1 }}.
-          <select ng-model="row" ng-show="!getPosition(bases, $index)" ng-init="row = bases[getBaseIndex(bases, $index) || 0]" ng-options="row.base.name for row in bases track by row.base.id"></select>
+          <select ng-model="row" ng-show="!getPosition(bases, $index)" ng-init="row = bases[getBaseIndex(bases, $index)]" ng-options="row.base.name for row in bases track by row.base.id"></select>
           <span ng-if="getPosition(bases, $index)">{{ getPosition(bases, $index).name }}</span>
 
-          <div class="col-sm-2" style="float:right;right: -10px;">
-            <button type="button" class="btn btn-primary btn-xs">Comment</button>
+          <div ng-if="getPosition(bases, $index)" class="col-sm-2" style="float:right;right: -10px;">
+            <button type="button" class="btn btn-primary btn-xs" ng-click="commentModal(row, members)">Comment</button>
           </div>
-          <div class="col-sm-2" style="float:right;">
-            <button type="button" class="btn btn-primary btn-xs">Review</button>
+          <div ng-if="attackCompleted(bases[getBaseIndex(bases, $index)])" class="col-sm-2" style="float:right;">
+            <button type="button" class="btn btn-primary btn-xs" ng-click="reviewModal(row, members)">Review</button>
           </div>
         </div>
 

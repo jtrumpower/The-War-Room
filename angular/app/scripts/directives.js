@@ -78,7 +78,36 @@ directives.directive('baseRow', function() {
             }
           }
           return null;
-        }
+        };
+
+        $scope.attackCompleted = function(row) {
+          console.log(row);
+          if(row) {
+            var dibs = row.dibs;
+            if(dibs) {
+              for(var i = 0; i < dibs.length; i++) {
+                var dib = dibs[i];
+                if(dib.destruction) {
+                  return true;
+                }
+              }
+            }
+          }
+
+          return undefined;
+        };
+
+        $scope.commentModal = function(dib) {
+          console.log(dib);
+          var modalInstance = $uibModal.open({
+            templateUrl: "/views/modals/update-dib.html",
+            controller: 'UpdateDibModalCtrl',
+            size: "sm",
+            resolve: {
+              dib: dib
+            }
+          });
+        };
       }
     ]
   };
